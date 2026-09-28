@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>WordRush</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#1f1b4d;--panel:#2c2770;--tile:#ffd23f;--ink:#1f1b4d;--coral:#ff6b5b;--mint:#5eead4;--txt:#fff;--dim:#b9b5e8}
+*{box-sizing:border-box}html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--txt);font-family:Fredoka,system-ui,sans-serif;padding:env(safe-area-inset-top) 16px env(safe-area-inset-bottom);display:flex;justify-content:center}
+main{width:100%;max-width:480px;padding:20px 0;display:flex;flex-direction:column;gap:16px}
+h1{font-size:48px;margin:8px 0 0;letter-spacing:1px}.sub{color:var(--dim);margin:0}
+input,button{font:inherit;border-radius:14px;border:0;padding:14px 16px;font-size:18px}
+input{background:var(--panel);color:var(--txt);width:100%;outline:2px solid transparent}
+input:focus-visible,button:focus-visible{outline:3px solid var(--mint)}
+button{background:var(--tile);color:var(--ink);font-weight:700;cursor:pointer}
+button.alt{background:var(--panel);color:var(--txt)}button.wa{background:#25d366;color:#053}
+.row{display:flex;gap:10px}.row>*{flex:1}
+.hidden{display:none!important}
+.bar{display:flex;justify-content:space-between;align-items:center;background:var(--panel);border-radius:14px;padding:10px 14px}
+.sc b{font-size:24px}.me{color:var(--mint)}
+.track{height:10px;background:var(--panel);border-radius:9px;overflow:hidden}
+.fill{height:100%;background:var(--mint);transition:width 1s linear}
+.tiles{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:12px 0}
+.tile{width:44px;height:54px;background:var(--tile);color:var(--ink);border-radius:10px;display:grid;place-items:center;font-size:28px;font-weight:700;box-shadow:0 4px 0 #c79a00}
+.shake{animation:sh .3s}@keyframes sh{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+@media(prefers-reduced-motion:reduce){.shake{animation:none}.fill{transition:none}}
+.card{background:var(--panel);border-radius:20px;padding:22px;text-align:center}
+.emoji{font-size:72px;line-height:1}.word{font-size:38px;font-weight:700;color:var(--tile);margin:6px 0}
+.chip{display:inline-block;background:var(--bg);border-radius:20px;padding:4px 12px;margin:3px}
+.big{font-size:22px;font-weight:600}.code{font-size:44px;letter-spacing:8px;color:var(--tile);font-weight:700}
+</style></head><body><main>
+
+<section id="home">
+  <h1>WordRush</h1><p class="sub">Unscramble the word before your friend does.</p><br>
+  <input id="name" placeholder="Your name" maxlength="14" autocomplete="nickname"><br><br>
+  <button id="create" style="width:100%">Create game</button><br><br>
+  <div class="row"><input id="jc" placeholder="Room code" maxlength="4" style="text-transform:uppercase"><button class="alt" id="join">Join game</button></div>
+  <p id="err" class="sub" style="color:var(--coral)"></p>
+</section>
+
+<section id="lobby" class="hidden card">
+  <p class="sub">Send this link to your friend</p><div class="code" id="lcode"></div><br>
+  <div class="row"><button class="wa" id="wa">Share on WhatsApp</button><button class="alt" id="copy">Copy link</button></div>
+  <p class="sub" id="wait">Waiting for your friend to join…</p>
+</section>
+
+<section id="game" class="hidden">
+  <div class="bar"><div class="sc"><span class="me" id="n0"></span> <b id="s0">0</b></div><div id="lv" class="sub"></div><div class="sc"><b id="s1">0</b> <span id="n1"></span></div></div>
+  <div class="track"><div class="fill" id="fill"></div></div>
+  <div class="tiles" id="tiles" aria-live="polite"></div>
+  <div class="row"><input id="ans" placeholder="Type the word" autocomplete="off" autocapitalize="off" spellcheck="false"><button id="go" style="flex:0 0 auto">Check</button></div>
+  <p class="sub" id="status" style="text-align:center"></p>
+</section>
+
+<section id="result" class="hidden card">
+  <div class="big" id="rwho"></div><div class="emoji" id="remoji"></div><div class="word" id="rword"></div>
+  <p id="rmean"></p><div id="rsyn"></div><p class="sub" id="rnext"></p>
+</section>
+
+<section id="end" class="hidden card">
+  <div class="emoji">🏆</div><div class="word" id="ewin"></div><p class="big" id="escore"></p>
+  <button id="again" style="width:100%">Play again</button>
+</section>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+let ws,you=0,names=['',''],tick,code='';
+const show=id=>['home','lobby','game','result','end'].forEach(s=>$(s).classList.toggle('hidden',s!==id));
+const link=()=>location.origin+location.pathname+'?room='+code;
+function connect(then){ws=new WebSocket((location.protocol==='https:'?'wss://':'ws://')+location.host);ws.onopen=then;ws.onmessage=e=>on(JSON.parse(e.data));ws.onclose=()=>{if(!$('end').offsetParent&&$('home').classList.contains('hidden')){show('home');$('err').textContent='Connection lost. Start a new game.'}}}
+const tx=o=>ws.send(JSON.stringify(o));
+const nm=()=>$('name').value.trim()||'Player';
+$('create').onclick=()=>connect(()=>tx({t:'create',name:nm()}));
+$('join').onclick=()=>connect(()=>tx({t:'join',code:$('jc').value.trim(),name:nm()}));
+$('copy').onclick=()=>{navigator.clipboard&&navigator.clipboard.writeText(link());$('copy').textContent='Copied'};
+$('wa').onclick=()=>window.open('https://wa.me/?text='+encodeURIComponent('Race me on WordRush! '+link()));
+$('again').onclick=()=>location.href=location.pathname;
+const q=new URLSearchParams(location.search).get('room');if(q)$('jc').value=q;
+function guess(){const w=$('ans').value.trim();if(w){tx({t:'guess',w});$('ans').value=''}}
+$('go').onclick=guess;$('ans').onkeydown=e=>e.key==='Enter'&&guess();
+function scoreUI(s){$('s0').textContent=s[0];$('s1').textContent=s[1]}
+function on(m){
+ if(m.t==='created'){code=m.code;$('lcode').textContent=code;show('lobby')}
+ else if(m.t==='error'){$('err').textContent=m.msg;ws.close()}
+ else if(m.t==='start'){you=m.you;names=[m.names[you],m.names[1-you]];$('n0').textContent=names[0]+' (you)';$('n1').textContent=names[1];show('game');$('tiles').innerHTML='';$('status').textContent='Get ready…'}
+ else if(m.t==='round'){
+  show('game');const s=m.scores;scoreUI([s[you],s[1-you]]);
+  $('lv').textContent='Level '+m.level+' of '+m.total;$('status').textContent='';
+  $('tiles').innerHTML=m.letters.map(l=>'<div class="tile">'+l+'</div>').join('');
+  const end=Date.now()+m.secs*1000;clearInterval(tick);$('fill').style.transition='none';$('fill').style.width='100%';
+  setTimeout(()=>{$('fill').style.transition='';},50);
+  tick=setInterval(()=>{const left=Math.max(0,end-Date.now());$('fill').style.width=(left/(m.secs*1000)*100)+'%';$('status').textContent=Math.ceil(left/1000)+'s left'},250);
+  $('ans').value='';$('ans').focus()}
+ else if(m.t==='wrong'){$('tiles').classList.remove('shake');void $('tiles').offsetWidth;$('tiles').classList.add('shake')}
+ else if(m.t==='result'){
+  clearInterval(tick);const s=m.scores;scoreUI([s[you],s[1-you]]);
+  $('rwho').textContent=m.by<0?"Time's up!":(m.by===you?'You got it! +'+m.pts:names[1]+' got it first')
+  $('remoji').textContent=m.emoji;$('rword').textContent=m.word;$('rmean').textContent=m.meaning;
+  $('rsyn').innerHTML=m.syn.map(x=>'<span class="chip">'+x+'</span>').join('');
+  let t=Math.round(m.pause/1000);$('rnext').textContent=m.last?'Final scores coming up…':'Next word in '+t+'s';show('result')}
+ else if(m.t==='end'){const a=m.scores[you],b=m.scores[1-you];
+  $('ewin').textContent=a===b?"It's a tie!":(a>b?'You win!':names[1]+' wins!');
+  $('escore').textContent=names[0]+' '+a+'  –  '+b+' '+names[1];show('end')}
+ else if(m.t==='left'){clearInterval(tick);show('end');$('ewin').textContent='Your friend left';$('escore').textContent=''}
+}
+</script></body></html>
