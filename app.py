@@ -25,12 +25,27 @@ except ImportError:  # AI is optional in free mode
 MODEL = os.getenv("CLAUDE_MODEL", "claude-3-7-sonnet-latest")
 UA = {"User-Agent": "Mozilla/5.0 (compatible; GrowthFinder/1.1)"}
 SEED_FILE = Path(__file__).parent / "seed_sources.json"
-BUILD = "2026-10-13-bearer-diag"
+BUILD = "2026-10-13-key-hint"
 
 
 def clean_key(value) -> str:
     """Strip whitespace and stray quotes that often get pasted along with API keys."""
     return (value or "").strip().strip("\"'").strip()
+
+
+def get_tavily_key():
+    """Return (key, source). A key typed in the sidebar wins over the environment variable."""
+    typed = clean_key(st.session_state.get("tavily_key"))
+    env = clean_key(os.getenv("TAVILY_API_KEY"))
+    if typed:
+        return typed, ("Railway variable" if typed == env else "sidebar box")
+    if env:
+        return env, "Railway variable"
+    return "", "none"
+
+
+def key_hint(key: str, source: str) -> str:
+    return f"[key from {source}; ends …{key[-4:]}; {len(key)} chars]"
 
 CATEGORIES = [
     "Local Directory / Citation", "Niche Directory", "Forum / Community",
@@ -101,7 +116,7 @@ def fetch_site(url: str) -> str:
 
 def web_search(query: str, n: int = 8) -> list[dict]:
     """Use Tavily when configured; otherwise try DuckDuckGo."""
-    tavily = clean_key(st.session_state.get("tavily_key") or os.getenv("TAVILY_API_KEY"))
+    tavily, tavily_source = get_tavily_key()
     try:
         if tavily:
             response = requests.post(
@@ -110,7 +125,9 @@ def web_search(query: str, n: int = 8) -> list[dict]:
                 json={"query": query, "max_results": n}, timeout=20,
             )
             if response.status_code >= 400:
-                raise RuntimeError(f"Tavily returned HTTP {response.status_code}: {response.text[:160]}")
+                raise RuntimeError(
+                    f"Tavily HTTP {response.status_code} {key_hint(tavily, tavily_source)}: {response.text[:120]}"
+                )
             return [
                 {"title": item.get("title", "Untitled"), "url": item.get("url", ""),
                  "snippet": item.get("content", "")[:350]}
@@ -429,17 +446,19 @@ with st.sidebar:
     st.header("Settings")
     st.caption("AI is optional. Leave the Anthropic key blank to use free-mode analysis.")
     st.session_state["anthropic_key"] = st.text_input(
-        "Anthropic API key (optional)", type="password", value=os.getenv("ANTHROPIC_API_KEY", "")
+        "Anthropic API key (optional)", type="password", value=os.getenv("ANTHROPIC_API_KEY", ""),
+        autocomplete="new-password",
     )
     st.session_state["tavily_key"] = st.text_input(
-        "Tavily API key (optional)", type="password", value=os.getenv("TAVILY_API_KEY", "")
+        "Tavily API key (optional)", type="password", value=os.getenv("TAVILY_API_KEY", ""),
+        autocomplete="new-password",
     )
     verify_links = st.checkbox("Check destination links", value=False,
                                help="Adds time and some sites block automated checks. It does not verify prices or submission eligibility.")
-    active_tavily = clean_key(st.session_state.get("tavily_key") or os.getenv("TAVILY_API_KEY"))
+    active_tavily, active_source = get_tavily_key()
     provider = "Tavily" if active_tavily else "DuckDuckGo"
     st.info(f"Search provider selected: **{provider}**. This confirms configuration, not successful API authentication.")
-    key_note = f"ends …{active_tavily[-4:]}, {len(active_tavily)} chars" if active_tavily else "none"
+    key_note = f"from {active_source}, ends …{active_tavily[-4:]}, {len(active_tavily)} chars" if active_tavily else "none"
     st.caption(f"Build: {BUILD} · Tavily key in use: {key_note}")
 
 with st.form("inputs"):
