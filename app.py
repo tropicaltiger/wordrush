@@ -115,8 +115,8 @@ def web_search(query: str, n: int = 8) -> list[dict]:
                  "snippet": item.get("body", "")[:350]}
                 for item in search.text(query, max_results=n) if item.get("href", "").startswith("http")
             ]
-    except Exception:
-        return []
+    except Exception as exc:
+        return [{"_search_error": f"{type(exc).__name__}: {re.sub(r"tvly-[A-Za-z0-9_-]+", "[REDACTED]", str(exc))[:220]}"}]
 
 
 def infer_country(location: str) -> str:
@@ -201,12 +201,17 @@ def collect_candidates(queries: list[str]) -> list[dict]:
     with ThreadPoolExecutor(max_workers=6) as executor:
         result_sets = list(executor.map(web_search, queries))
     seen, candidates = set(), []
+    errors = []
     for result_set in result_sets:
         for result in result_set:
+            if "_search_error" in result:
+                errors.append(result["_search_error"])
+                continue
             domain = domain_of(result.get("url", ""))
             if domain and domain not in seen:
                 seen.add(domain)
                 candidates.append(result)
+    st.session_state["search_diagnostics"] = {"errors": errors, "queries": len(queries), "results": len(candidates)}
     return candidates[:90]
 
 
@@ -418,11 +423,12 @@ with st.sidebar:
         "Anthropic API key (optional)", type="password", value=os.getenv("ANTHROPIC_API_KEY", "")
     )
     st.session_state["tavily_key"] = st.text_input(
-        "Tavily API key (optional)", type="password", value=os.getenv("TAVILY_API_KEY", "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")
+        "Tavily API key (optional)", type="password", value=os.getenv("TAVILY_API_KEY", "")
     )
     verify_links = st.checkbox("Check destination links", value=False,
                                help="Adds time and some sites block automated checks. It does not verify prices or submission eligibility.")
-    st.markdown("**Free mode:** DuckDuckGo search + curated starter list. Search results may be limited by network access.")
+    provider = "Tavily" if (st.session_state.get("tavily_key") or os.getenv("TAVILY_API_KEY")) else "DuckDuckGo"
+    st.info(f"Search provider selected: **{provider}**. This confirms configuration, not successful API authentication.")
 
 with st.form("inputs"):
     c1, c2, c3 = st.columns([2, 1.5, 1.5])
@@ -442,6 +448,10 @@ if go:
         profile = profile_business(client, business.strip(), location.strip(), keyword.strip(), site_text)
         st.write(f"Searching the web with {len(profile['search_queries'])} queries")
         candidates = collect_candidates(profile["search_queries"])
+        diag = st.session_state.get("search_diagnostics", {})
+        st.write(f"Search provider: {provider} | Live candidates: {len(candidates)} | Failed queries: {len(diag.get('errors', []))}")
+        if diag.get("errors"):
+            st.warning("Search errors occurred. Expand diagnostics below for details.")
         st.write(f"Classifying {len(candidates)} live-search results")
         rows = classify(client, profile, candidates)
         rows += load_seed(profile.get("country_code") or infer_country(location), profile.get("scope", "local"))
@@ -465,6 +475,12 @@ if result:
     if df.empty:
         st.warning("No sources were returned. Check internet access or add a search API key.")
         st.stop()
+    diag = st.session_state.get("search_diagnostics", {})
+    st.caption(f"Search provider: {provider} · Live candidates: {diag.get('results', 0)} · Failed queries: {len(diag.get('errors', []))} · Curated sources are separate")
+    if diag.get("errors"):
+        with st.expander("Search diagnostics"):
+            for err in list(dict.fromkeys(diag["errors"]))[:5]:
+                st.error(err)
     with st.expander("Business profile", expanded=False):
         st.json(profile)
     st.info("Cost, rules, and relevance are research indicators, not guarantees. Confirm details on each destination before publishing or paying.")
