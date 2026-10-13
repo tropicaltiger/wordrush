@@ -100,7 +100,8 @@ def web_search(query: str, n: int = 8) -> list[dict]:
         if tavily:
             response = requests.post(
                 "https://api.tavily.com/search",
-                json={"api_key": tavily, "query": query, "max_results": n}, timeout=20,
+                headers={"Authorization": f"Bearer {tavily.strip()}"},
+                json={"query": query, "max_results": n}, timeout=20,
             )
             response.raise_for_status()
             return [
@@ -116,7 +117,8 @@ def web_search(query: str, n: int = 8) -> list[dict]:
                 for item in search.text(query, max_results=n) if item.get("href", "").startswith("http")
             ]
     except Exception as exc:
-        return [{"_search_error": f"{type(exc).__name__}: {re.sub(r"tvly-[A-Za-z0-9_-]+", "[REDACTED]", str(exc))[:220]}"}]
+        safe_msg = re.sub(r"tvly-[A-Za-z0-9_-]+", "[REDACTED]", str(exc))[:220]
+        return [{"_search_error": f"{type(exc).__name__}: {safe_msg}"}]
 
 
 def infer_country(location: str) -> str:
