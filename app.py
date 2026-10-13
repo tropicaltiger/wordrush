@@ -418,7 +418,7 @@ with st.sidebar:
         "Anthropic API key (optional)", type="password", value=os.getenv("ANTHROPIC_API_KEY", "")
     )
     st.session_state["tavily_key"] = st.text_input(
-        "Tavily API key (optional)", type="password", value=os.getenv("TAVILY_API_KEY", "")
+        "Tavily API key (optional)", type="password", value=os.getenv("TAVILY_API_KEY", "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")
     )
     verify_links = st.checkbox("Check destination links", value=False,
                                help="Adds time and some sites block automated checks. It does not verify prices or submission eligibility.")
