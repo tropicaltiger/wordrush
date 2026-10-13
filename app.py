@@ -25,6 +25,12 @@ except ImportError:  # AI is optional in free mode
 MODEL = os.getenv("CLAUDE_MODEL", "claude-3-7-sonnet-latest")
 UA = {"User-Agent": "Mozilla/5.0 (compatible; GrowthFinder/1.1)"}
 SEED_FILE = Path(__file__).parent / "seed_sources.json"
+BUILD = "2026-10-13-bearer-diag"
+
+
+def clean_key(value) -> str:
+    """Strip whitespace and stray quotes that often get pasted along with API keys."""
+    return (value or "").strip().strip("\"'").strip()
 
 CATEGORIES = [
     "Local Directory / Citation", "Niche Directory", "Forum / Community",
@@ -95,15 +101,16 @@ def fetch_site(url: str) -> str:
 
 def web_search(query: str, n: int = 8) -> list[dict]:
     """Use Tavily when configured; otherwise try DuckDuckGo."""
-    tavily = st.session_state.get("tavily_key") or os.getenv("TAVILY_API_KEY")
+    tavily = clean_key(st.session_state.get("tavily_key") or os.getenv("TAVILY_API_KEY"))
     try:
         if tavily:
             response = requests.post(
                 "https://api.tavily.com/search",
-                headers={"Authorization": f"Bearer {tavily.strip()}"},
+                headers={"Authorization": f"Bearer {tavily}"},
                 json={"query": query, "max_results": n}, timeout=20,
             )
-            response.raise_for_status()
+            if response.status_code >= 400:
+                raise RuntimeError(f"Tavily returned HTTP {response.status_code}: {response.text[:160]}")
             return [
                 {"title": item.get("title", "Untitled"), "url": item.get("url", ""),
                  "snippet": item.get("content", "")[:350]}
@@ -429,8 +436,11 @@ with st.sidebar:
     )
     verify_links = st.checkbox("Check destination links", value=False,
                                help="Adds time and some sites block automated checks. It does not verify prices or submission eligibility.")
-    provider = "Tavily" if (st.session_state.get("tavily_key") or os.getenv("TAVILY_API_KEY")) else "DuckDuckGo"
+    active_tavily = clean_key(st.session_state.get("tavily_key") or os.getenv("TAVILY_API_KEY"))
+    provider = "Tavily" if active_tavily else "DuckDuckGo"
     st.info(f"Search provider selected: **{provider}**. This confirms configuration, not successful API authentication.")
+    key_note = f"ends …{active_tavily[-4:]}, {len(active_tavily)} chars" if active_tavily else "none"
+    st.caption(f"Build: {BUILD} · Tavily key in use: {key_note}")
 
 with st.form("inputs"):
     c1, c2, c3 = st.columns([2, 1.5, 1.5])
