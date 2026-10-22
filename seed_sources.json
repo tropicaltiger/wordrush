@@ -1,35 +1,4440 @@
 [
-  {"name": "Google Business Profile", "category": "Local Directory / Citation", "cost": "Free", "region": "global", "relevance": 10, "url": "https://business.google.com", "link_type": "nofollow", "what_to_do": "Claim and fully complete the profile, add photos, services, hours, posts weekly.", "notes": "Verification by postcard/video/phone can take days. Top priority for local businesses.", "local_only": true},
-  {"name": "Bing Places for Business", "category": "Local Directory / Citation", "cost": "Free", "region": "global", "relevance": 8, "url": "https://www.bingplaces.com", "link_type": "nofollow", "what_to_do": "Import from Google Business Profile in a few clicks.", "notes": "Also feeds data to other search engines and assistants.", "local_only": true},
-  {"name": "Apple Business Connect", "category": "Local Directory / Citation", "cost": "Free", "region": "global", "relevance": 7, "url": "https://businessconnect.apple.com", "link_type": "nofollow", "what_to_do": "Claim your place so it shows correctly in Apple Maps.", "notes": "Requires Apple ID.", "local_only": true},
-  {"name": "Facebook Page", "category": "Social / Bookmarking", "cost": "Free", "region": "global", "relevance": 7, "url": "https://www.facebook.com/pages/create", "link_type": "nofollow", "what_to_do": "Create a page, add NAP details, post regularly, join local groups.", "notes": "Group self-promotion rules vary; read each group's rules."},
-  {"name": "LinkedIn Company Page", "category": "Social / Bookmarking", "cost": "Free", "region": "global", "relevance": 7, "url": "https://www.linkedin.com/company/setup/new/", "link_type": "nofollow", "what_to_do": "Create the page, publish articles, share in relevant groups.", "notes": "Best for B2B and services."},
-  {"name": "Instagram Business", "category": "Social / Bookmarking", "cost": "Free", "region": "global", "relevance": 6, "url": "https://business.instagram.com", "link_type": "nofollow", "what_to_do": "Business account, Reels and local hashtags.", "notes": "Visual niches benefit most."},
-  {"name": "YouTube Channel", "category": "Free Content Platform", "cost": "Free", "region": "global", "relevance": 7, "url": "https://www.youtube.com", "link_type": "nofollow", "what_to_do": "Publish how-to videos and local explainers with keyword-rich descriptions.", "notes": "Second largest search engine."},
-  {"name": "Pinterest Business", "category": "Social / Bookmarking", "cost": "Free", "region": "global", "relevance": 5, "url": "https://business.pinterest.com", "link_type": "nofollow", "what_to_do": "Create boards and pins linking to useful pages.", "notes": "Strong for visual and DIY niches."},
-  {"name": "Medium", "category": "Free Content Platform", "cost": "Free", "region": "global", "relevance": 5, "url": "https://medium.com", "link_type": "nofollow", "what_to_do": "Republish or adapt blog posts with a canonical link.", "notes": "Use canonical import to avoid duplicate content."},
-  {"name": "LinkedIn Articles", "category": "Free Content Platform", "cost": "Free", "region": "global", "relevance": 6, "url": "https://www.linkedin.com/pulse/", "link_type": "nofollow", "what_to_do": "Publish expertise articles under the founder's profile.", "notes": "Personal profiles get more reach than pages."},
-  {"name": "Substack", "category": "Free Content Platform", "cost": "Free", "region": "global", "relevance": 4, "url": "https://substack.com", "link_type": "nofollow", "what_to_do": "Start a newsletter to own your audience.", "notes": "Needs consistent cadence."},
-  {"name": "Quora", "category": "Q&A Platform", "cost": "Free", "region": "global", "relevance": 7, "url": "https://www.quora.com", "link_type": "nofollow", "what_to_do": "Answer niche questions with genuine value; link only when relevant.", "notes": "Heavy self-promotion gets answers collapsed."},
-  {"name": "Reddit", "category": "Forum / Community", "cost": "Free", "region": "global", "relevance": 8, "url": "https://www.reddit.com", "link_type": "nofollow", "what_to_do": "Find niche and city subreddits, contribute for 2+ weeks before sharing links.", "notes": "Each subreddit has its own self-promo rules; accounts get banned for spam."},
-  {"name": "Crunchbase", "category": "Niche Directory", "cost": "Free", "region": "global", "relevance": 5, "url": "https://www.crunchbase.com", "link_type": "nofollow", "what_to_do": "Create an organisation profile.", "notes": "Best for startups and tech."},
-  {"name": "Product Hunt", "category": "Niche Directory", "cost": "Free", "region": "global", "relevance": 5, "url": "https://www.producthunt.com", "link_type": "dofollow", "what_to_do": "Launch software or digital products.", "notes": "Prepare assets and a launch-day community."},
-  {"name": "Trustpilot", "category": "Review Platform", "cost": "Freemium", "region": "global", "relevance": 7, "url": "https://business.trustpilot.com", "link_type": "nofollow", "what_to_do": "Claim the profile and invite genuine customer reviews.", "notes": "Paid tiers add invitations and widgets."},
-  {"name": "G2", "category": "Review Platform", "cost": "Freemium", "region": "global", "relevance": 6, "url": "https://sell.g2.com", "link_type": "nofollow", "what_to_do": "List software products and request reviews.", "notes": "Software only."},
-  {"name": "Clutch", "category": "Review Platform", "cost": "Freemium", "region": "global", "relevance": 6, "url": "https://clutch.co", "link_type": "nofollow", "what_to_do": "List agency or B2B service profile with verified client reviews.", "notes": "For agencies and B2B services."},
-  {"name": "Yelp for Business", "category": "Review Platform", "cost": "Freemium", "region": "global", "relevance": 5, "url": "https://business.yelp.com", "link_type": "nofollow", "what_to_do": "Claim the listing if your market uses Yelp.", "notes": "Limited usage in some countries; ads are paid.", "local_only": true},
-  {"name": "HARO / Connectively alternatives (Qwoted, Featured)", "category": "Press / PR", "cost": "Freemium", "region": "global", "relevance": 6, "url": "https://www.qwoted.com", "link_type": "dofollow", "what_to_do": "Respond to journalist queries in your expertise area.", "notes": "Free tiers are limited; availability of services changes, verify before relying."},
-  {"name": "Google Ads", "category": "Paid Ads / Sponsorship", "cost": "Paid", "region": "global", "relevance": 7, "url": "https://ads.google.com", "est_cost": "Pay per click; set a daily budget", "link_type": "n/a", "what_to_do": "Start with a small local search campaign on high-intent keywords.", "notes": "Needs conversion tracking to judge ROI."},
-  {"name": "Meta Ads", "category": "Paid Ads / Sponsorship", "cost": "Paid", "region": "global", "relevance": 6, "url": "https://www.facebook.com/business/ads", "est_cost": "Daily budget based", "link_type": "n/a", "what_to_do": "Local awareness or lead-form campaigns.", "notes": "Creative testing needed."},
-  {"name": "LinkedIn Ads", "category": "Paid Ads / Sponsorship", "cost": "Paid", "region": "global", "relevance": 5, "url": "https://business.linkedin.com/marketing-solutions/ads", "est_cost": "Typically the most expensive per click", "link_type": "n/a", "what_to_do": "B2B targeting by job title and industry.", "notes": "Only if customers are businesses."},
-  {"name": "Justdial", "category": "Local Directory / Citation", "cost": "Freemium", "region": "IN", "relevance": 9, "url": "https://www.justdial.com/Free-Listing", "link_type": "nofollow", "what_to_do": "Create the free listing; evaluate paid ranking only after tracking leads.", "notes": "Expect sales calls for paid plans.", "est_cost": "Free listing; paid plans vary"},
-  {"name": "Sulekha", "category": "Local Directory / Citation", "cost": "Freemium", "region": "IN", "relevance": 7, "url": "https://www.sulekha.com", "link_type": "nofollow", "what_to_do": "List services and respond to leads.", "notes": "Lead-based paid model."},
-  {"name": "IndiaMART", "category": "Niche Directory", "cost": "Freemium", "region": "IN", "relevance": 8, "url": "https://seller.indiamart.com", "link_type": "nofollow", "what_to_do": "List products for B2B buyers.", "notes": "Best for manufacturers, wholesalers and suppliers."},
-  {"name": "TradeIndia", "category": "Niche Directory", "cost": "Freemium", "region": "IN", "relevance": 6, "url": "https://www.tradeindia.com", "link_type": "nofollow", "what_to_do": "B2B listing for products and exporters.", "notes": "Check lead quality before paying."},
-  {"name": "Urban Company (service providers)", "category": "Niche Directory", "cost": "Free", "region": "IN", "relevance": 5, "url": "https://www.urbancompany.com", "link_type": "n/a", "what_to_do": "Apply as a professional if you offer home or beauty services.", "notes": "Commission based; selective onboarding."},
-  {"name": "Grotal", "category": "Local Directory / Citation", "cost": "Free", "region": "IN", "relevance": 4, "url": "https://www.grotal.com", "link_type": "nofollow", "what_to_do": "Free local listing.", "notes": "Smaller reach; low priority."},
-  {"name": "Indian Chambers of Commerce (FICCI / CII / local chamber)", "category": "Awards / Lists / Associations", "cost": "Paid", "region": "IN", "relevance": 5, "url": "https://ficci.in", "link_type": "n/a", "what_to_do": "Check membership for credibility, events and networking in your city.", "notes": "Membership fees vary by chamber; look for your district chamber too."},
-  {"name": "Nextdoor", "category": "Forum / Community", "cost": "Free", "region": "US", "relevance": 6, "url": "https://business.nextdoor.com", "link_type": "nofollow", "what_to_do": "Create a business page for neighbourhood recommendations.", "notes": "US-centric."},
-  {"name": "Better Business Bureau", "category": "Review Platform", "cost": "Paid", "region": "US", "relevance": 5, "url": "https://www.bbb.org/get-accredited", "link_type": "dofollow", "what_to_do": "Consider accreditation if trust matters in your niche.", "notes": "Accreditation fees apply."},
-  {"name": "Yell", "category": "Local Directory / Citation", "cost": "Freemium", "region": "GB", "relevance": 6, "url": "https://www.yell.com", "link_type": "nofollow", "what_to_do": "Create a free listing.", "notes": "UK local directory."}
+ {
+  "name": "Google Business Profile",
+  "category": "Local Directory / Citation",
+  "cost": "Free",
+  "region": [
+   "GLOBAL"
+  ],
+  "relevance": 10,
+  "url": "https://business.google.com",
+  "link_type": "nofollow",
+  "what_to_do": "Claim and fully complete the profile, add photos, services, hours, posts weekly.",
+  "notes": "Verification by postcard/video/phone can take days. Top priority for local businesses.",
+  "local_only": true,
+  "niche": [
+   "all"
+  ]
+ },
+ {
+  "name": "Bing Places for Business",
+  "category": "Local Directory / Citation",
+  "cost": "Free",
+  "region": [
+   "GLOBAL"
+  ],
+  "relevance": 8,
+  "url": "https://www.bingplaces.com",
+  "link_type": "nofollow",
+  "what_to_do": "Import from Google Business Profile in a few clicks.",
+  "notes": "Also feeds data to other search engines and assistants.",
+  "local_only": true,
+  "niche": [
+   "all"
+  ]
+ },
+ {
+  "name": "Apple Business Connect",
+  "category": "Local Directory / Citation",
+  "cost": "Free",
+  "region": [
+   "GLOBAL"
+  ],
+  "relevance": 7,
+  "url": "https://businessconnect.apple.com",
+  "link_type": "nofollow",
+  "what_to_do": "Claim your place so it shows correctly in Apple Maps.",
+  "notes": "Requires Apple ID.",
+  "local_only": true,
+  "niche": [
+   "all"
+  ]
+ },
+ {
+  "name": "Facebook Page",
+  "category": "Social / Bookmarking",
+  "cost": "Free",
+  "region": [
+   "GLOBAL"
+  ],
+  "relevance": 7,
+  "url": "https://www.facebook.com/pages/create",
+  "link_type": "nofollow",
+  "what_to_do": "Create a page, add NAP details, post regularly, join local groups.",
+  "notes": "Group self-promotion rules vary; read each group's rules.",
+  "niche": [
+   "all"
+  ]
+ },
+ {
+  "name": "LinkedIn Company Page",
+  "category": "Social / Bookmarking",
+  "cost": "Free",
+  "region": [
+   "GLOBAL"
+  ],
+  "relevance": 7,
+  "url": "https://www.linkedin.com/company/setup/new/",
+  "link_type": "nofollow",
+  "what_to_do": "Create the page, publish articles, share in relevant groups.",
+  "notes": "Best for B2B and services.",
+  "niche": [
+   "all"
+  ]
+ },
+ {
+  "name": "Instagram Business",
+  "category": "Social / Bookmarking",
+  "cost": "Free",
+  "region": [
+   "GLOBAL"
+  ],
+  "relevance": 6,
+  "url": "https://business.instagram.com",
+  "link_type": "nofollow",
+  "what_to_do": "Business account, Reels and local hashtags.",
+  "notes": "Visual niches benefit most.",
+  "niche": [
+   "all"
+  ]
+ },
+ {
+  "name": "YouTube Channel",
+  "category": "Free Content Platform",
+  "cost": "Free",
+  "region": [
+   "GLOBAL"
+  ],
+  "relevance": 7,
+  "url": "https://www.youtube.com",
+  "link_type": "nofollow",
+  "what_to_do": "Publish how-to videos and local explainers with keyword-rich descriptions.",
+  "notes": "Second largest search engine.",
+  "niche": [
+   "all"
+  ]
+ },
+ {
+  "name": "Pinterest Business",
+  "category": "Social / Bookmarking",
+  "cost": "Free",
+  "region": [
+   "GLOBAL"
+  ],
+  "relevance": 5,
+  "url": "https://business.pinterest.com",
+  "link_type": "nofollow",
+  "what_to_do": "Create boards and pins linking to useful pages.",
+  "notes": "Strong for visual and DIY niches.",
+  "niche": [
+   "all"
+  ]
+ },
+ {
+  "name": "Medium",
+  "category": "Free Content Platform",
+  "cost": "Free",
+  "region": [
+   "GLOBAL"
+  ],
+  "relevance": 5,
+  "url": "https://medium.com",
+  "link_type": "nofollow",
+  "what_to_do": "Republish or adapt blog posts with a canonical link.",
+  "notes": "Use canonical import to avoid duplicate content.",
+  "niche": [
+   "all"
+  ]
+ },
+ {
+  "name": "LinkedIn Articles",
+  "category": "Free Content Platform",
+  "cost": "Free",
+  "region": [
+   "GLOBAL"
+  ],
+  "relevance": 6,
+  "url": "https://www.linkedin.com/pulse/",
+  "link_type": "nofollow",
+  "what_to_do": "Publish expertise articles under the founder's profile.",
+  "notes": "Personal profiles get more reach than pages.",
+  "niche": [
+   "all"
+  ]
+ },
+ {
+  "name": "Substack",
+  "category": "Free Content Platform",
+  "cost": "Free",
+  "region": [
+   "GLOBAL"
+  ],
+  "relevance": 4,
+  "url": "https://substack.com",
+  "link_type": "nofollow",
+  "what_to_do": "Start a newsletter to own your audience.",
+  "notes": "Needs consistent cadence.",
+  "niche": [
+   "all"
+  ]
+ },
+ {
+  "name": "Quora",
+  "category": "Q&A Platform",
+  "cost": "Free",
+  "region": [
+   "GLOBAL"
+  ],
+  "relevance": 7,
+  "url": "https://www.quora.com",
+  "link_type": "nofollow",
+  "what_to_do": "Answer niche questions with genuine value; link only when relevant.",
+  "notes": "Heavy self-promotion gets answers collapsed.",
+  "niche": [
+   "all"
+  ]
+ },
+ {
+  "name": "Reddit",
+  "category": "Forum / Community",
+  "cost": "Free",
+  "region": [
+   "GLOBAL"
+  ],
+  "relevance": 8,
+  "url": "https://www.reddit.com",
+  "link_type": "nofollow",
+  "what_to_do": "Find niche and city subreddits, contribute for 2+ weeks before sharing links.",
+  "notes": "Each subreddit has its own self-promo rules; accounts get banned for spam.",
+  "niche": [
+   "all"
+  ]
+ },
+ {
+  "name": "Crunchbase",
+  "category": "Niche Directory",
+  "cost": "Free",
+  "region": [
+   "GLOBAL"
+  ],
+  "relevance": 5,
+  "url": "https://www.crunchbase.com",
+  "link_type": "nofollow",
+  "what_to_do": "Create an organisation profile.",
+  "notes": "Best for startups and tech.",
+  "niche": [
+   "software",
+   "b2b"
+  ]
+ },
+ {
+  "name": "Product Hunt",
+  "category": "Niche Directory",
+  "cost": "Free",
+  "region": [
+   "GLOBAL"
+  ],
+  "relevance": 5,
+  "url": "https://www.producthunt.com",
+  "link_type": "dofollow",
+  "what_to_do": "Launch software or digital products.",
+  "notes": "Prepare assets and a launch-day community.",
+  "niche": [
+   "software"
+  ]
+ },
+ {
+  "name": "Trustpilot",
+  "category": "Review Platform",
+  "cost": "Freemium",
+  "region": [
+   "GLOBAL"
+  ],
+  "relevance": 7,
+  "url": "https://business.trustpilot.com",
+  "link_type": "nofollow",
+  "what_to_do": "Claim the profile and invite genuine customer reviews.",
+  "notes": "Paid tiers add invitations and widgets.",
+  "niche": [
+   "all"
+  ]
+ },
+ {
+  "name": "G2",
+  "category": "Review Platform",
+  "cost": "Freemium",
+  "region": [
+   "GLOBAL"
+  ],
+  "relevance": 6,
+  "url": "https://sell.g2.com",
+  "link_type": "nofollow",
+  "what_to_do": "List software products and request reviews.",
+  "notes": "Software only.",
+  "niche": [
+   "software"
+  ]
+ },
+ {
+  "name": "Clutch",
+  "category": "Review Platform",
+  "cost": "Freemium",
+  "region": [
+   "GLOBAL"
+  ],
+  "relevance": 6,
+  "url": "https://clutch.co",
+  "link_type": "nofollow",
+  "what_to_do": "List agency or B2B service profile with verified client reviews.",
+  "notes": "For agencies and B2B services.",
+  "niche": [
+   "b2b",
+   "software"
+  ]
+ },
+ {
+  "name": "Yelp for Business",
+  "category": "Review Platform",
+  "cost": "Freemium",
+  "region": [
+   "GLOBAL"
+  ],
+  "relevance": 5,
+  "url": "https://business.yelp.com",
+  "link_type": "nofollow",
+  "what_to_do": "Claim the listing if your market uses Yelp.",
+  "notes": "Limited usage in some countries; ads are paid.",
+  "local_only": true,
+  "niche": [
+   "local_services",
+   "food",
+   "beauty",
+   "healthcare",
+   "travel"
+  ]
+ },
+ {
+  "name": "HARO / Connectively alternatives (Qwoted, Featured)",
+  "category": "Press / PR",
+  "cost": "Freemium",
+  "region": [
+   "GLOBAL"
+  ],
+  "relevance": 6,
+  "url": "https://www.qwoted.com",
+  "link_type": "dofollow",
+  "what_to_do": "Respond to journalist queries in your expertise area.",
+  "notes": "Free tiers are limited; availability of services changes, verify before relying.",
+  "niche": [
+   "all"
+  ]
+ },
+ {
+  "name": "Google Ads",
+  "category": "Paid Ads / Sponsorship",
+  "cost": "Paid",
+  "region": [
+   "GLOBAL"
+  ],
+  "relevance": 7,
+  "url": "https://ads.google.com",
+  "est_cost": "Pay per click; set a daily budget",
+  "link_type": "n/a",
+  "what_to_do": "Start with a small local search campaign on high-intent keywords.",
+  "notes": "Needs conversion tracking to judge ROI.",
+  "niche": [
+   "all"
+  ]
+ },
+ {
+  "name": "Meta Ads",
+  "category": "Paid Ads / Sponsorship",
+  "cost": "Paid",
+  "region": [
+   "GLOBAL"
+  ],
+  "relevance": 6,
+  "url": "https://www.facebook.com/business/ads",
+  "est_cost": "Daily budget based",
+  "link_type": "n/a",
+  "what_to_do": "Local awareness or lead-form campaigns.",
+  "notes": "Creative testing needed.",
+  "niche": [
+   "all"
+  ]
+ },
+ {
+  "name": "LinkedIn Ads",
+  "category": "Paid Ads / Sponsorship",
+  "cost": "Paid",
+  "region": [
+   "GLOBAL"
+  ],
+  "relevance": 5,
+  "url": "https://business.linkedin.com/marketing-solutions/ads",
+  "est_cost": "Typically the most expensive per click",
+  "link_type": "n/a",
+  "what_to_do": "B2B targeting by job title and industry.",
+  "notes": "Only if customers are businesses.",
+  "niche": [
+   "b2b",
+   "software",
+   "education"
+  ]
+ },
+ {
+  "name": "Justdial",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "IN"
+  ],
+  "relevance": 9,
+  "url": "https://www.justdial.com/Free-Listing",
+  "link_type": "nofollow",
+  "what_to_do": "Create the free listing; evaluate paid ranking only after tracking leads.",
+  "notes": "Expect sales calls for paid plans.",
+  "est_cost": "Free listing; paid plans vary",
+  "niche": [
+   "all"
+  ]
+ },
+ {
+  "name": "Sulekha",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "IN"
+  ],
+  "relevance": 7,
+  "url": "https://www.sulekha.com",
+  "link_type": "nofollow",
+  "what_to_do": "List services and respond to leads.",
+  "notes": "Lead-based paid model.",
+  "niche": [
+   "all"
+  ]
+ },
+ {
+  "name": "IndiaMART",
+  "category": "Niche Directory",
+  "cost": "Freemium",
+  "region": [
+   "IN"
+  ],
+  "relevance": 8,
+  "url": "https://seller.indiamart.com",
+  "link_type": "nofollow",
+  "what_to_do": "List products for B2B buyers.",
+  "notes": "Best for manufacturers, wholesalers and suppliers.",
+  "niche": [
+   "b2b",
+   "ecommerce"
+  ]
+ },
+ {
+  "name": "TradeIndia",
+  "category": "Niche Directory",
+  "cost": "Freemium",
+  "region": [
+   "IN"
+  ],
+  "relevance": 6,
+  "url": "https://www.tradeindia.com",
+  "link_type": "nofollow",
+  "what_to_do": "B2B listing for products and exporters.",
+  "notes": "Check lead quality before paying.",
+  "niche": [
+   "b2b",
+   "ecommerce"
+  ]
+ },
+ {
+  "name": "Urban Company (service providers)",
+  "category": "Niche Directory",
+  "cost": "Free",
+  "region": [
+   "IN"
+  ],
+  "relevance": 5,
+  "url": "https://www.urbancompany.com",
+  "link_type": "n/a",
+  "what_to_do": "Apply as a professional if you offer home or beauty services.",
+  "notes": "Commission based; selective onboarding.",
+  "niche": [
+   "local_services",
+   "beauty"
+  ]
+ },
+ {
+  "name": "Grotal",
+  "category": "Local Directory / Citation",
+  "cost": "Free",
+  "region": [
+   "IN"
+  ],
+  "relevance": 4,
+  "url": "https://www.grotal.com",
+  "link_type": "nofollow",
+  "what_to_do": "Free local listing.",
+  "notes": "Smaller reach; low priority.",
+  "niche": [
+   "all"
+  ]
+ },
+ {
+  "name": "Indian Chambers of Commerce (FICCI / CII / local chamber)",
+  "category": "Awards / Lists / Associations",
+  "cost": "Paid",
+  "region": [
+   "IN"
+  ],
+  "relevance": 5,
+  "url": "https://ficci.in",
+  "link_type": "n/a",
+  "what_to_do": "Check membership for credibility, events and networking in your city.",
+  "notes": "Membership fees vary by chamber; look for your district chamber too.",
+  "niche": [
+   "all"
+  ]
+ },
+ {
+  "name": "Nextdoor",
+  "category": "Forum / Community",
+  "cost": "Free",
+  "region": [
+   "US"
+  ],
+  "relevance": 6,
+  "url": "https://business.nextdoor.com",
+  "link_type": "nofollow",
+  "what_to_do": "Create a business page for neighbourhood recommendations.",
+  "notes": "US-centric.",
+  "niche": [
+   "all"
+  ]
+ },
+ {
+  "name": "Better Business Bureau",
+  "category": "Review Platform",
+  "cost": "Paid",
+  "region": [
+   "US"
+  ],
+  "relevance": 5,
+  "url": "https://www.bbb.org/get-accredited",
+  "link_type": "dofollow",
+  "what_to_do": "Consider accreditation if trust matters in your niche.",
+  "notes": "Accreditation fees apply.",
+  "niche": [
+   "all"
+  ]
+ },
+ {
+  "name": "Yell",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "GB"
+  ],
+  "relevance": 6,
+  "url": "https://www.yell.com",
+  "link_type": "nofollow",
+  "what_to_do": "Create a free listing.",
+  "notes": "UK local directory.",
+  "niche": [
+   "all"
+  ]
+ },
+ {
+  "name": "Brownbook",
+  "category": "Local Directory / Citation",
+  "cost": "Free",
+  "region": [
+   "GLOBAL"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.brownbook.net",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Free global listing; low authority, treat as a citation."
+ },
+ {
+  "name": "Foursquare",
+  "category": "Local Directory / Citation",
+  "cost": "Free",
+  "region": [
+   "GLOBAL"
+  ],
+  "niche": [
+   "food",
+   "local_services",
+   "travel",
+   "beauty"
+  ],
+  "relevance": 4,
+  "url": "https://foursquare.com",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Data feeds other apps; claim your place."
+ },
+ {
+  "name": "Hotfrog",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "GLOBAL"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 4,
+  "url": "https://www.hotfrog.com",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Eventbrite",
+  "category": "Events / Podcasts",
+  "cost": "Freemium",
+  "region": [
+   "GLOBAL"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.eventbrite.com",
+  "link_type": "unknown",
+  "what_to_do": "Create or join relevant events and pitch for talks or listings.",
+  "notes": "List workshops, webinars or open days; free for free events."
+ },
+ {
+  "name": "Meetup",
+  "category": "Events / Podcasts",
+  "cost": "Freemium",
+  "region": [
+   "GLOBAL"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.meetup.com",
+  "link_type": "unknown",
+  "what_to_do": "Create or join relevant events and pitch for talks or listings.",
+  "notes": "Join local groups or host one; organiser fees apply."
+ },
+ {
+  "name": "WhatsApp Business",
+  "category": "Social / Bookmarking",
+  "cost": "Free",
+  "region": [
+   "GLOBAL"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 6,
+  "url": "https://business.whatsapp.com",
+  "link_type": "unknown",
+  "what_to_do": "Create a complete profile and post regularly with local and niche keywords.",
+  "notes": "Catalog, quick replies and a click-to-chat link for your site and profiles."
+ },
+ {
+  "name": "PRLog",
+  "category": "Press / PR",
+  "cost": "Freemium",
+  "region": [
+   "GLOBAL"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 4,
+  "url": "https://www.prlog.org",
+  "link_type": "unknown",
+  "what_to_do": "Submit a newsworthy announcement or respond to journalist queries.",
+  "notes": "Free press release site; low authority, use for announcements only."
+ },
+ {
+  "name": "Udemy",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "GLOBAL"
+  ],
+  "niche": [
+   "education",
+   "safety",
+   "software",
+   "b2b"
+  ],
+  "relevance": 6,
+  "url": "https://www.udemy.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Instructors keep a share of sales; marketplace rules apply."
+ },
+ {
+  "name": "Dev.to",
+  "category": "Free Content Platform",
+  "cost": "Free",
+  "region": [
+   "GLOBAL"
+  ],
+  "niche": [
+   "software"
+  ],
+  "relevance": 5,
+  "url": "https://dev.to",
+  "link_type": "unknown",
+  "what_to_do": "Publish useful original content and link back to a relevant page.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Hashnode",
+  "category": "Free Content Platform",
+  "cost": "Free",
+  "region": [
+   "GLOBAL"
+  ],
+  "niche": [
+   "software"
+  ],
+  "relevance": 5,
+  "url": "https://hashnode.com",
+  "link_type": "unknown",
+  "what_to_do": "Publish useful original content and link back to a relevant page.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Indie Hackers",
+  "category": "Forum / Community",
+  "cost": "Free",
+  "region": [
+   "GLOBAL"
+  ],
+  "niche": [
+   "software"
+  ],
+  "relevance": 5,
+  "url": "https://www.indiehackers.com",
+  "link_type": "unknown",
+  "what_to_do": "Read the rules, contribute helpfully for a couple of weeks, then share links only where allowed.",
+  "notes": "Product pages and community posts; read self-promotion rules."
+ },
+ {
+  "name": "Hacker News",
+  "category": "Forum / Community",
+  "cost": "Free",
+  "region": [
+   "GLOBAL"
+  ],
+  "niche": [
+   "software"
+  ],
+  "relevance": 5,
+  "url": "https://news.ycombinator.com",
+  "link_type": "unknown",
+  "what_to_do": "Read the rules, contribute helpfully for a couple of weeks, then share links only where allowed.",
+  "notes": "'Show HN' posts need a genuinely usable product; strict about promotion."
+ },
+ {
+  "name": "AlternativeTo",
+  "category": "Niche Directory",
+  "cost": "Free",
+  "region": [
+   "GLOBAL"
+  ],
+  "niche": [
+   "software"
+  ],
+  "relevance": 5,
+  "url": "https://alternativeto.net",
+  "link_type": "unknown",
+  "what_to_do": "Check that the directory accepts your business type, then submit a complete profile.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Capterra",
+  "category": "Review Platform",
+  "cost": "Freemium",
+  "region": [
+   "GLOBAL"
+  ],
+  "niche": [
+   "software"
+  ],
+  "relevance": 6,
+  "url": "https://www.capterra.com/vendors/",
+  "link_type": "unknown",
+  "what_to_do": "Claim the profile and invite genuine customer reviews that follow platform policy.",
+  "notes": "Free basic listing; paid placement exists."
+ },
+ {
+  "name": "SourceForge",
+  "category": "Niche Directory",
+  "cost": "Free",
+  "region": [
+   "GLOBAL"
+  ],
+  "niche": [
+   "software"
+  ],
+  "relevance": 4,
+  "url": "https://sourceforge.net",
+  "link_type": "unknown",
+  "what_to_do": "Check that the directory accepts your business type, then submit a complete profile.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "GoodFirms",
+  "category": "Review Platform",
+  "cost": "Freemium",
+  "region": [
+   "GLOBAL"
+  ],
+  "niche": [
+   "b2b",
+   "software"
+  ],
+  "relevance": 5,
+  "url": "https://www.goodfirms.co",
+  "link_type": "unknown",
+  "what_to_do": "Claim the profile and invite genuine customer reviews that follow platform policy.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Kompass",
+  "category": "Niche Directory",
+  "cost": "Freemium",
+  "region": [
+   "GLOBAL"
+  ],
+  "niche": [
+   "b2b",
+   "ecommerce"
+  ],
+  "relevance": 5,
+  "url": "https://www.kompass.com",
+  "link_type": "unknown",
+  "what_to_do": "Check that the directory accepts your business type, then submit a complete profile.",
+  "notes": "Global B2B directory."
+ },
+ {
+  "name": "Alibaba.com",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "GLOBAL"
+  ],
+  "niche": [
+   "b2b",
+   "ecommerce"
+  ],
+  "relevance": 6,
+  "url": "https://www.alibaba.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Paid supplier memberships; check lead quality."
+ },
+ {
+  "name": "Global Sources",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "GLOBAL"
+  ],
+  "niche": [
+   "b2b",
+   "ecommerce"
+  ],
+  "relevance": 5,
+  "url": "https://www.globalsources.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "ThomasNet",
+  "category": "Niche Directory",
+  "cost": "Freemium",
+  "region": [
+   "US"
+  ],
+  "niche": [
+   "b2b"
+  ],
+  "relevance": 6,
+  "url": "https://www.thomasnet.com",
+  "link_type": "unknown",
+  "what_to_do": "Check that the directory accepts your business type, then submit a complete profile.",
+  "notes": "Industrial supplier directory."
+ },
+ {
+  "name": "WhatClinic",
+  "category": "Niche Directory",
+  "cost": "Freemium",
+  "region": [
+   "GLOBAL"
+  ],
+  "niche": [
+   "healthcare"
+  ],
+  "relevance": 7,
+  "url": "https://www.whatclinic.com",
+  "link_type": "unknown",
+  "what_to_do": "Check that the directory accepts your business type, then submit a complete profile.",
+  "notes": "Clinic directory used for treatments and medical travel."
+ },
+ {
+  "name": "Doctoralia",
+  "category": "Niche Directory",
+  "cost": "Freemium",
+  "region": [
+   "ES",
+   "MX",
+   "BR",
+   "IT",
+   "AR",
+   "CL",
+   "CO",
+   "PE",
+   "PT"
+  ],
+  "niche": [
+   "healthcare"
+  ],
+  "relevance": 7,
+  "url": "https://www.doctoralia.com",
+  "link_type": "unknown",
+  "what_to_do": "Check that the directory accepts your business type, then submit a complete profile.",
+  "notes": "Doctor and clinic profiles; paid plans add booking and visibility."
+ },
+ {
+  "name": "ZnanyLekarz",
+  "category": "Niche Directory",
+  "cost": "Freemium",
+  "region": [
+   "PL"
+  ],
+  "niche": [
+   "healthcare"
+  ],
+  "relevance": 7,
+  "url": "https://www.znanylekarz.pl",
+  "link_type": "unknown",
+  "what_to_do": "Check that the directory accepts your business type, then submit a complete profile.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Doctolib",
+  "category": "Niche Directory",
+  "cost": "Paid",
+  "region": [
+   "FR",
+   "DE",
+   "IT"
+  ],
+  "niche": [
+   "healthcare"
+  ],
+  "relevance": 7,
+  "url": "https://www.doctolib.fr",
+  "link_type": "unknown",
+  "what_to_do": "Check that the directory accepts your business type, then submit a complete profile.",
+  "notes": "Subscription-based booking platform."
+ },
+ {
+  "name": "Jameda",
+  "category": "Niche Directory",
+  "cost": "Freemium",
+  "region": [
+   "DE"
+  ],
+  "niche": [
+   "healthcare"
+  ],
+  "relevance": 6,
+  "url": "https://www.jameda.de",
+  "link_type": "unknown",
+  "what_to_do": "Check that the directory accepts your business type, then submit a complete profile.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Healthgrades",
+  "category": "Niche Directory",
+  "cost": "Freemium",
+  "region": [
+   "US"
+  ],
+  "niche": [
+   "healthcare"
+  ],
+  "relevance": 6,
+  "url": "https://www.healthgrades.com",
+  "link_type": "unknown",
+  "what_to_do": "Check that the directory accepts your business type, then submit a complete profile.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Zocdoc",
+  "category": "Niche Directory",
+  "cost": "Paid",
+  "region": [
+   "US"
+  ],
+  "niche": [
+   "healthcare"
+  ],
+  "relevance": 5,
+  "url": "https://www.zocdoc.com",
+  "link_type": "unknown",
+  "what_to_do": "Check that the directory accepts your business type, then submit a complete profile.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Doctify",
+  "category": "Niche Directory",
+  "cost": "Freemium",
+  "region": [
+   "GB"
+  ],
+  "niche": [
+   "healthcare"
+  ],
+  "relevance": 5,
+  "url": "https://www.doctify.com",
+  "link_type": "unknown",
+  "what_to_do": "Check that the directory accepts your business type, then submit a complete profile.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Practo",
+  "category": "Niche Directory",
+  "cost": "Freemium",
+  "region": [
+   "IN"
+  ],
+  "niche": [
+   "healthcare"
+  ],
+  "relevance": 8,
+  "url": "https://www.practo.com",
+  "link_type": "unknown",
+  "what_to_do": "Check that the directory accepts your business type, then submit a complete profile.",
+  "notes": "Large Indian doctor and clinic directory."
+ },
+ {
+  "name": "Lybrate",
+  "category": "Niche Directory",
+  "cost": "Freemium",
+  "region": [
+   "IN"
+  ],
+  "niche": [
+   "healthcare"
+  ],
+  "relevance": 5,
+  "url": "https://www.lybrate.com",
+  "link_type": "unknown",
+  "what_to_do": "Check that the directory accepts your business type, then submit a complete profile.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Vezeeta",
+  "category": "Niche Directory",
+  "cost": "Paid",
+  "region": [
+   "EG",
+   "SA",
+   "AE"
+  ],
+  "niche": [
+   "healthcare"
+  ],
+  "relevance": 6,
+  "url": "https://www.vezeeta.com",
+  "link_type": "unknown",
+  "what_to_do": "Check that the directory accepts your business type, then submit a complete profile.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Okadoc",
+  "category": "Niche Directory",
+  "cost": "Paid",
+  "region": [
+   "AE",
+   "SA"
+  ],
+  "niche": [
+   "healthcare"
+  ],
+  "relevance": 5,
+  "url": "https://www.okadoc.com",
+  "link_type": "unknown",
+  "what_to_do": "Check that the directory accepts your business type, then submit a complete profile.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "IOSH",
+  "category": "Awards / Lists / Associations",
+  "cost": "Paid",
+  "region": [
+   "GLOBAL"
+  ],
+  "niche": [
+   "safety"
+  ],
+  "relevance": 6,
+  "url": "https://iosh.com",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Check whether your courses can be IOSH-approved and listed."
+ },
+ {
+  "name": "NEBOSH",
+  "category": "Awards / Lists / Associations",
+  "cost": "Paid",
+  "region": [
+   "GLOBAL"
+  ],
+  "niche": [
+   "safety",
+   "education"
+  ],
+  "relevance": 6,
+  "url": "https://www.nebosh.org",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Accredited learning partners can be listed; accreditation has requirements and fees."
+ },
+ {
+  "name": "ASSP",
+  "category": "Awards / Lists / Associations",
+  "cost": "Paid",
+  "region": [
+   "US"
+  ],
+  "niche": [
+   "safety"
+  ],
+  "relevance": 5,
+  "url": "https://www.assp.org",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Safety professionals' association; chapters and events."
+ },
+ {
+  "name": "KHDA (Dubai)",
+  "category": "Awards / Lists / Associations",
+  "cost": "Unknown",
+  "region": [
+   "AE"
+  ],
+  "niche": [
+   "education",
+   "safety"
+  ],
+  "relevance": 6,
+  "url": "https://www.khda.gov.ae",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Dubai training providers usually deal with KHDA approvals; confirm requirements."
+ },
+ {
+  "name": "Thumbtack",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "US"
+  ],
+  "niche": [
+   "local_services"
+  ],
+  "relevance": 6,
+  "url": "https://www.thumbtack.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Pay per lead."
+ },
+ {
+  "name": "Angi",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "US"
+  ],
+  "niche": [
+   "local_services"
+  ],
+  "relevance": 6,
+  "url": "https://www.angi.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Houzz",
+  "category": "Niche Directory",
+  "cost": "Freemium",
+  "region": [
+   "GLOBAL"
+  ],
+  "niche": [
+   "local_services",
+   "real_estate"
+  ],
+  "relevance": 5,
+  "url": "https://www.houzz.com",
+  "link_type": "unknown",
+  "what_to_do": "Check that the directory accepts your business type, then submit a complete profile.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Checkatrade",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "GB"
+  ],
+  "niche": [
+   "local_services"
+  ],
+  "relevance": 6,
+  "url": "https://www.checkatrade.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Vetting and membership fees apply."
+ },
+ {
+  "name": "HomeStars",
+  "category": "Review Platform",
+  "cost": "Freemium",
+  "region": [
+   "CA"
+  ],
+  "niche": [
+   "local_services"
+  ],
+  "relevance": 6,
+  "url": "https://homestars.com",
+  "link_type": "unknown",
+  "what_to_do": "Claim the profile and invite genuine customer reviews that follow platform policy.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Oneflare",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "AU"
+  ],
+  "niche": [
+   "local_services"
+  ],
+  "relevance": 5,
+  "url": "https://www.oneflare.com.au",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "ServiceSeeking",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "AU"
+  ],
+  "niche": [
+   "local_services"
+  ],
+  "relevance": 5,
+  "url": "https://www.serviceseeking.com.au",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Snupit",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "ZA"
+  ],
+  "niche": [
+   "local_services"
+  ],
+  "relevance": 5,
+  "url": "https://www.snupit.co.za",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "ServiceMarket",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "AE"
+  ],
+  "niche": [
+   "local_services"
+  ],
+  "relevance": 6,
+  "url": "https://www.servicemarket.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "UAE home-services marketplace."
+ },
+ {
+  "name": "Quikr",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "IN"
+  ],
+  "niche": [
+   "local_services",
+   "ecommerce"
+  ],
+  "relevance": 5,
+  "url": "https://www.quikr.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Werkspot",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "NL"
+  ],
+  "niche": [
+   "local_services"
+  ],
+  "relevance": 6,
+  "url": "https://www.werkspot.nl",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Fresha",
+  "category": "Niche Directory",
+  "cost": "Freemium",
+  "region": [
+   "GLOBAL"
+  ],
+  "niche": [
+   "beauty"
+  ],
+  "relevance": 6,
+  "url": "https://www.fresha.com",
+  "link_type": "unknown",
+  "what_to_do": "Check that the directory accepts your business type, then submit a complete profile.",
+  "notes": "Salon and spa booking marketplace."
+ },
+ {
+  "name": "Booksy",
+  "category": "Niche Directory",
+  "cost": "Paid",
+  "region": [
+   "GLOBAL"
+  ],
+  "niche": [
+   "beauty"
+  ],
+  "relevance": 5,
+  "url": "https://booksy.com",
+  "link_type": "unknown",
+  "what_to_do": "Check that the directory accepts your business type, then submit a complete profile.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Treatwell",
+  "category": "Niche Directory",
+  "cost": "Paid",
+  "region": [
+   "GB",
+   "FR",
+   "DE",
+   "ES",
+   "IT",
+   "NL"
+  ],
+  "niche": [
+   "beauty"
+  ],
+  "relevance": 6,
+  "url": "https://www.treatwell.com",
+  "link_type": "unknown",
+  "what_to_do": "Check that the directory accepts your business type, then submit a complete profile.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Hot Pepper Beauty",
+  "category": "Niche Directory",
+  "cost": "Paid",
+  "region": [
+   "JP"
+  ],
+  "niche": [
+   "beauty"
+  ],
+  "relevance": 6,
+  "url": "https://beauty.hotpepper.jp",
+  "link_type": "unknown",
+  "what_to_do": "Check that the directory accepts your business type, then submit a complete profile.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Tripadvisor",
+  "category": "Review Platform",
+  "cost": "Freemium",
+  "region": [
+   "GLOBAL"
+  ],
+  "niche": [
+   "food",
+   "travel"
+  ],
+  "relevance": 7,
+  "url": "https://www.tripadvisor.com",
+  "link_type": "unknown",
+  "what_to_do": "Claim the profile and invite genuine customer reviews that follow platform policy.",
+  "notes": "Claim the listing; paid ads and subscriptions optional."
+ },
+ {
+  "name": "TheFork",
+  "category": "Niche Directory",
+  "cost": "Paid",
+  "region": [
+   "FR",
+   "ES",
+   "IT",
+   "GB",
+   "BE",
+   "NL",
+   "PT",
+   "CH"
+  ],
+  "niche": [
+   "food"
+  ],
+  "relevance": 6,
+  "url": "https://www.thefork.com",
+  "link_type": "unknown",
+  "what_to_do": "Check that the directory accepts your business type, then submit a complete profile.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "OpenTable",
+  "category": "Niche Directory",
+  "cost": "Paid",
+  "region": [
+   "US",
+   "GB",
+   "CA",
+   "AU",
+   "DE",
+   "MX",
+   "JP",
+   "IE"
+  ],
+  "niche": [
+   "food"
+  ],
+  "relevance": 6,
+  "url": "https://www.opentable.com",
+  "link_type": "unknown",
+  "what_to_do": "Check that the directory accepts your business type, then submit a complete profile.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Zomato",
+  "category": "Niche Directory",
+  "cost": "Freemium",
+  "region": [
+   "IN"
+  ],
+  "niche": [
+   "food"
+  ],
+  "relevance": 6,
+  "url": "https://www.zomato.com",
+  "link_type": "unknown",
+  "what_to_do": "Check that the directory accepts your business type, then submit a complete profile.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Talabat",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "AE",
+   "KW",
+   "QA",
+   "BH",
+   "OM",
+   "EG"
+  ],
+  "niche": [
+   "food"
+  ],
+  "relevance": 6,
+  "url": "https://www.talabat.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Commission based."
+ },
+ {
+  "name": "OpenRice",
+  "category": "Review Platform",
+  "cost": "Freemium",
+  "region": [
+   "HK"
+  ],
+  "niche": [
+   "food"
+  ],
+  "relevance": 7,
+  "url": "https://www.openrice.com",
+  "link_type": "unknown",
+  "what_to_do": "Claim the profile and invite genuine customer reviews that follow platform policy.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Tabelog",
+  "category": "Review Platform",
+  "cost": "Freemium",
+  "region": [
+   "JP"
+  ],
+  "niche": [
+   "food"
+  ],
+  "relevance": 6,
+  "url": "https://tabelog.com",
+  "link_type": "unknown",
+  "what_to_do": "Claim the profile and invite genuine customer reviews that follow platform policy.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Booking.com Partner Hub",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "GLOBAL"
+  ],
+  "niche": [
+   "travel"
+  ],
+  "relevance": 6,
+  "url": "https://partner.booking.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Commission based."
+ },
+ {
+  "name": "GetYourGuide Suppliers",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "GLOBAL"
+  ],
+  "niche": [
+   "travel"
+  ],
+  "relevance": 5,
+  "url": "https://supplier.getyourguide.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Commission based."
+ },
+ {
+  "name": "Bayut",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "AE"
+  ],
+  "niche": [
+   "real_estate"
+  ],
+  "relevance": 7,
+  "url": "https://www.bayut.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Property Finder",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "AE"
+  ],
+  "niche": [
+   "real_estate"
+  ],
+  "relevance": 7,
+  "url": "https://www.propertyfinder.ae",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "99acres",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "IN"
+  ],
+  "niche": [
+   "real_estate"
+  ],
+  "relevance": 7,
+  "url": "https://www.99acres.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "MagicBricks",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "IN"
+  ],
+  "niche": [
+   "real_estate"
+  ],
+  "relevance": 7,
+  "url": "https://www.magicbricks.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Rightmove",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "GB"
+  ],
+  "niche": [
+   "real_estate"
+  ],
+  "relevance": 7,
+  "url": "https://www.rightmove.co.uk",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Zoopla",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "GB"
+  ],
+  "niche": [
+   "real_estate"
+  ],
+  "relevance": 6,
+  "url": "https://www.zoopla.co.uk",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Zillow",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "US"
+  ],
+  "niche": [
+   "real_estate"
+  ],
+  "relevance": 7,
+  "url": "https://www.zillow.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Realtor.com",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "US"
+  ],
+  "niche": [
+   "real_estate"
+  ],
+  "relevance": 6,
+  "url": "https://www.realtor.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "realestate.com.au",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "AU"
+  ],
+  "niche": [
+   "real_estate"
+  ],
+  "relevance": 7,
+  "url": "https://www.realestate.com.au",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Domain",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "AU"
+  ],
+  "niche": [
+   "real_estate"
+  ],
+  "relevance": 6,
+  "url": "https://www.domain.com.au",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Funda",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "NL"
+  ],
+  "niche": [
+   "real_estate"
+  ],
+  "relevance": 7,
+  "url": "https://www.funda.nl",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Idealista",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "ES",
+   "IT",
+   "PT"
+  ],
+  "niche": [
+   "real_estate"
+  ],
+  "relevance": 7,
+  "url": "https://www.idealista.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "ImmoScout24",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "DE"
+  ],
+  "niche": [
+   "real_estate"
+  ],
+  "relevance": 7,
+  "url": "https://www.immobilienscout24.de",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "SeLoger",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "FR"
+  ],
+  "niche": [
+   "real_estate"
+  ],
+  "relevance": 7,
+  "url": "https://www.seloger.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Property24",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "ZA"
+  ],
+  "niche": [
+   "real_estate"
+  ],
+  "relevance": 6,
+  "url": "https://www.property24.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "PropertyGuru",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "SG"
+  ],
+  "niche": [
+   "real_estate"
+  ],
+  "relevance": 7,
+  "url": "https://www.propertyguru.com.sg",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Zameen",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "PK"
+  ],
+  "niche": [
+   "real_estate"
+  ],
+  "relevance": 7,
+  "url": "https://www.zameen.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Sreality",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "CZ"
+  ],
+  "niche": [
+   "real_estate"
+  ],
+  "relevance": 6,
+  "url": "https://www.sreality.cz",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Zonaprop",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "AR"
+  ],
+  "niche": [
+   "real_estate"
+  ],
+  "relevance": 6,
+  "url": "https://www.zonaprop.com.ar",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Avvo",
+  "category": "Niche Directory",
+  "cost": "Freemium",
+  "region": [
+   "US"
+  ],
+  "niche": [
+   "legal"
+  ],
+  "relevance": 6,
+  "url": "https://www.avvo.com",
+  "link_type": "unknown",
+  "what_to_do": "Check that the directory accepts your business type, then submit a complete profile.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Justia",
+  "category": "Niche Directory",
+  "cost": "Freemium",
+  "region": [
+   "US"
+  ],
+  "niche": [
+   "legal"
+  ],
+  "relevance": 5,
+  "url": "https://www.justia.com",
+  "link_type": "unknown",
+  "what_to_do": "Check that the directory accepts your business type, then submit a complete profile.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Martindale",
+  "category": "Niche Directory",
+  "cost": "Freemium",
+  "region": [
+   "GLOBAL"
+  ],
+  "niche": [
+   "legal"
+  ],
+  "relevance": 5,
+  "url": "https://www.martindale.com",
+  "link_type": "unknown",
+  "what_to_do": "Check that the directory accepts your business type, then submit a complete profile.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "The Legal 500",
+  "category": "Awards / Lists / Associations",
+  "cost": "Unknown",
+  "region": [
+   "GLOBAL"
+  ],
+  "niche": [
+   "legal"
+  ],
+  "relevance": 5,
+  "url": "https://www.legal500.com",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Rankings are research-based; check submission process."
+ },
+ {
+  "name": "PakWheels",
+  "category": "Forum / Community",
+  "cost": "Freemium",
+  "region": [
+   "PK"
+  ],
+  "niche": [
+   "auto"
+  ],
+  "relevance": 6,
+  "url": "https://www.pakwheels.com",
+  "link_type": "unknown",
+  "what_to_do": "Read the rules, contribute helpfully for a couple of weeks, then share links only where allowed.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "CarDekho",
+  "category": "Niche Directory",
+  "cost": "Paid",
+  "region": [
+   "IN"
+  ],
+  "niche": [
+   "auto"
+  ],
+  "relevance": 6,
+  "url": "https://www.cardekho.com",
+  "link_type": "unknown",
+  "what_to_do": "Check that the directory accepts your business type, then submit a complete profile.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Autotrader UK",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "GB"
+  ],
+  "niche": [
+   "auto"
+  ],
+  "relevance": 6,
+  "url": "https://www.autotrader.co.uk",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Autotrader US",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "US"
+  ],
+  "niche": [
+   "auto"
+  ],
+  "relevance": 6,
+  "url": "https://www.autotrader.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "YallaMotor",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "AE",
+   "SA",
+   "EG",
+   "KW",
+   "QA"
+  ],
+  "niche": [
+   "auto"
+  ],
+  "relevance": 6,
+  "url": "https://uae.yallamotor.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Yellow Pages (US)",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "US"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 6,
+  "url": "https://www.yellowpages.com",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Manta",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "US"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.manta.com",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "U.S. Chamber of Commerce",
+  "category": "Awards / Lists / Associations",
+  "cost": "Paid",
+  "region": [
+   "US"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.uschamber.com",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Your local chamber matters more than the national one."
+ },
+ {
+  "name": "Thomson Local",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "GB"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.thomsonlocal.com",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "FreeIndex",
+  "category": "Local Directory / Citation",
+  "cost": "Free",
+  "region": [
+   "GB"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.freeindex.co.uk",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Federation of Small Businesses",
+  "category": "Awards / Lists / Associations",
+  "cost": "Paid",
+  "region": [
+   "GB"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.fsb.org.uk",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "British Chambers of Commerce",
+  "category": "Awards / Lists / Associations",
+  "cost": "Paid",
+  "region": [
+   "GB"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.britishchambers.org.uk",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Yellow Pages Canada",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "CA"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 6,
+  "url": "https://www.yellowpages.ca",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Canada411",
+  "category": "Local Directory / Citation",
+  "cost": "Free",
+  "region": [
+   "CA"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 4,
+  "url": "https://www.canada411.ca",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Canadian Chamber of Commerce",
+  "category": "Awards / Lists / Associations",
+  "cost": "Paid",
+  "region": [
+   "CA"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://chamber.ca",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Yellow Pages Australia",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "AU"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 7,
+  "url": "https://www.yellowpages.com.au",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "True Local",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "AU"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 6,
+  "url": "https://www.truelocal.com.au",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Localsearch",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "AU"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.localsearch.com.au",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Hotfrog Australia",
+  "category": "Local Directory / Citation",
+  "cost": "Free",
+  "region": [
+   "AU"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 4,
+  "url": "https://www.hotfrog.com.au",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Yellow NZ",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "NZ"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 7,
+  "url": "https://www.yellow.co.nz",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Finda",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "NZ"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.finda.co.nz",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Neighbourly",
+  "category": "Forum / Community",
+  "cost": "Free",
+  "region": [
+   "NZ"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 6,
+  "url": "https://neighbourly.co.nz",
+  "link_type": "unknown",
+  "what_to_do": "Read the rules, contribute helpfully for a couple of weeks, then share links only where allowed.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Golden Pages",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "IE"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 6,
+  "url": "https://www.goldenpages.ie",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Hotfrog Ireland",
+  "category": "Local Directory / Citation",
+  "cost": "Free",
+  "region": [
+   "IE"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 4,
+  "url": "https://www.hotfrog.ie",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Chambers Ireland",
+  "category": "Awards / Lists / Associations",
+  "cost": "Paid",
+  "region": [
+   "IE"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.chambers.ie",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "StartupIndia",
+  "category": "Awards / Lists / Associations",
+  "cost": "Free",
+  "region": [
+   "IN"
+  ],
+  "niche": [
+   "software",
+   "b2b"
+  ],
+  "relevance": 5,
+  "url": "https://www.startupindia.gov.in",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Government startup platform; recognition rules apply."
+ },
+ {
+  "name": "ExportersIndia",
+  "category": "Niche Directory",
+  "cost": "Freemium",
+  "region": [
+   "IN"
+  ],
+  "niche": [
+   "b2b",
+   "ecommerce"
+  ],
+  "relevance": 5,
+  "url": "https://www.exportersindia.com",
+  "link_type": "unknown",
+  "what_to_do": "Check that the directory accepts your business type, then submit a complete profile.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Yellow Pages UAE",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "AE"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 7,
+  "url": "https://www.yellowpages-uae.com",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Dubizzle",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "AE"
+  ],
+  "niche": [
+   "local_services",
+   "real_estate",
+   "auto",
+   "ecommerce"
+  ],
+  "relevance": 6,
+  "url": "https://www.dubizzle.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Dubai Chambers",
+  "category": "Awards / Lists / Associations",
+  "cost": "Paid",
+  "region": [
+   "AE"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 6,
+  "url": "https://www.dubaichambers.com",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Membership gives directory listing, networking and events."
+ },
+ {
+  "name": "Abu Dhabi Chamber",
+  "category": "Awards / Lists / Associations",
+  "cost": "Paid",
+  "region": [
+   "AE"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.abudhabichamber.ae",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "ExpatWoman",
+  "category": "Forum / Community",
+  "cost": "Free",
+  "region": [
+   "AE"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 6,
+  "url": "https://www.expatwoman.com",
+  "link_type": "unknown",
+  "what_to_do": "Read the rules, contribute helpfully for a couple of weeks, then share links only where allowed.",
+  "notes": "UAE community forum; read rules before posting offers."
+ },
+ {
+  "name": "What's On Dubai",
+  "category": "Events / Podcasts",
+  "cost": "Unknown",
+  "region": [
+   "AE"
+  ],
+  "niche": [
+   "food",
+   "travel",
+   "beauty"
+  ],
+  "relevance": 5,
+  "url": "https://whatson.ae",
+  "link_type": "unknown",
+  "what_to_do": "Create or join relevant events and pitch for talks or listings.",
+  "notes": "Lifestyle and events listings; check how to submit."
+ },
+ {
+  "name": "Haraj",
+  "category": "Marketplace / Partner Network",
+  "cost": "Free",
+  "region": [
+   "SA"
+  ],
+  "niche": [
+   "local_services",
+   "auto",
+   "real_estate",
+   "ecommerce"
+  ],
+  "relevance": 5,
+  "url": "https://haraj.com.sa",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Council of Saudi Chambers",
+  "category": "Awards / Lists / Associations",
+  "cost": "Paid",
+  "region": [
+   "SA"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.csc.org.sa",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Qatar Chamber",
+  "category": "Awards / Lists / Associations",
+  "cost": "Paid",
+  "region": [
+   "QA"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.qatarchamber.com",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Qatar Living",
+  "category": "Forum / Community",
+  "cost": "Free",
+  "region": [
+   "QA"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 6,
+  "url": "https://www.qatarliving.com",
+  "link_type": "unknown",
+  "what_to_do": "Read the rules, contribute helpfully for a couple of weeks, then share links only where allowed.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Kuwait Chamber of Commerce",
+  "category": "Awards / Lists / Associations",
+  "cost": "Paid",
+  "region": [
+   "KW"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.kuwaitchamber.org.kw",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Bahrain Chamber of Commerce",
+  "category": "Awards / Lists / Associations",
+  "cost": "Paid",
+  "region": [
+   "BH"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.bahrainchamber.org.bh",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Oman Chamber of Commerce",
+  "category": "Awards / Lists / Associations",
+  "cost": "Paid",
+  "region": [
+   "OM"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.chamberoman.om",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Dubizzle Egypt",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "EG"
+  ],
+  "niche": [
+   "local_services",
+   "real_estate",
+   "auto",
+   "ecommerce"
+  ],
+  "relevance": 6,
+  "url": "https://www.dubizzle.com.eg",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Yad2",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "IL"
+  ],
+  "niche": [
+   "local_services",
+   "real_estate",
+   "auto",
+   "ecommerce"
+  ],
+  "relevance": 5,
+  "url": "https://www.yad2.co.il",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Dapei Zahav",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "IL"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.d.co.il",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Sahibinden",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "TR"
+  ],
+  "niche": [
+   "local_services",
+   "real_estate",
+   "auto",
+   "ecommerce"
+  ],
+  "relevance": 5,
+  "url": "https://www.sahibinden.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Sikayetvar",
+  "category": "Review Platform",
+  "cost": "Freemium",
+  "region": [
+   "TR"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.sikayetvar.com",
+  "link_type": "unknown",
+  "what_to_do": "Claim the profile and invite genuine customer reviews that follow platform policy.",
+  "notes": "Brand profile lets you answer complaints publicly."
+ },
+ {
+  "name": "Yellow Pages Singapore",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "SG"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 6,
+  "url": "https://www.yellowpages.com.sg",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Carousell",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "SG",
+   "MY",
+   "PH",
+   "HK",
+   "TW",
+   "ID"
+  ],
+  "niche": [
+   "local_services",
+   "ecommerce",
+   "auto"
+  ],
+  "relevance": 5,
+  "url": "https://www.carousell.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "HardwareZone Forums",
+  "category": "Forum / Community",
+  "cost": "Free",
+  "region": [
+   "SG"
+  ],
+  "niche": [
+   "software",
+   "ecommerce"
+  ],
+  "relevance": 5,
+  "url": "https://forums.hardwarezone.com.sg",
+  "link_type": "unknown",
+  "what_to_do": "Read the rules, contribute helpfully for a couple of weeks, then share links only where allowed.",
+  "notes": "Tech-heavy forum; promotion is policed."
+ },
+ {
+  "name": "Singapore Business Federation",
+  "category": "Awards / Lists / Associations",
+  "cost": "Paid",
+  "region": [
+   "SG"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.sbf.org.sg",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Yellow Pages Malaysia",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "MY"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.yellowpages.my",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Lowyat Forum",
+  "category": "Forum / Community",
+  "cost": "Free",
+  "region": [
+   "MY"
+  ],
+  "niche": [
+   "software",
+   "ecommerce"
+  ],
+  "relevance": 5,
+  "url": "https://forum.lowyat.net",
+  "link_type": "unknown",
+  "what_to_do": "Read the rules, contribute helpfully for a couple of weeks, then share links only where allowed.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Mudah",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "MY"
+  ],
+  "niche": [
+   "local_services",
+   "real_estate",
+   "auto",
+   "ecommerce"
+  ],
+  "relevance": 5,
+  "url": "https://www.mudah.my",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "MATRADE",
+  "category": "Awards / Lists / Associations",
+  "cost": "Free",
+  "region": [
+   "MY"
+  ],
+  "niche": [
+   "b2b",
+   "ecommerce"
+  ],
+  "relevance": 5,
+  "url": "https://www.matrade.gov.my",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Exporter support and directories."
+ },
+ {
+  "name": "Kaskus",
+  "category": "Forum / Community",
+  "cost": "Free",
+  "region": [
+   "ID"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.kaskus.co.id",
+  "link_type": "unknown",
+  "what_to_do": "Read the rules, contribute helpfully for a couple of weeks, then share links only where allowed.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Tokopedia",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "ID"
+  ],
+  "niche": [
+   "ecommerce"
+  ],
+  "relevance": 6,
+  "url": "https://www.tokopedia.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "KADIN Indonesia",
+  "category": "Awards / Lists / Associations",
+  "cost": "Paid",
+  "region": [
+   "ID"
+  ],
+  "niche": [
+   "b2b"
+  ],
+  "relevance": 4,
+  "url": "https://kadin.id",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Shopee",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "SG",
+   "MY",
+   "ID",
+   "PH",
+   "TH",
+   "VN",
+   "TW",
+   "BR"
+  ],
+  "niche": [
+   "ecommerce"
+  ],
+  "relevance": 6,
+  "url": "https://seller.shopee.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Lazada",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "SG",
+   "MY",
+   "ID",
+   "PH",
+   "TH",
+   "VN"
+  ],
+  "niche": [
+   "ecommerce"
+  ],
+  "relevance": 6,
+  "url": "https://www.lazada.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Philippine Yellow Pages",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "PH"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.yellow-pages.ph",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Philippine Chamber of Commerce",
+  "category": "Awards / Lists / Associations",
+  "cost": "Paid",
+  "region": [
+   "PH"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 4,
+  "url": "https://www.philippinechamber.com",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Pantip",
+  "category": "Forum / Community",
+  "cost": "Free",
+  "region": [
+   "TH"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 6,
+  "url": "https://pantip.com",
+  "link_type": "unknown",
+  "what_to_do": "Read the rules, contribute helpfully for a couple of weeks, then share links only where allowed.",
+  "notes": "Large Thai forum; Thai-language posts work best."
+ },
+ {
+  "name": "Thai Chamber of Commerce",
+  "category": "Awards / Lists / Associations",
+  "cost": "Paid",
+  "region": [
+   "TH"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 4,
+  "url": "https://www.thaichamber.org",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Zalo Official Account",
+  "category": "Social / Bookmarking",
+  "cost": "Freemium",
+  "region": [
+   "VN"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 7,
+  "url": "https://oa.zalo.me",
+  "link_type": "unknown",
+  "what_to_do": "Create a complete profile and post regularly with local and niche keywords.",
+  "notes": "Zalo is the main messaging app in Vietnam."
+ },
+ {
+  "name": "Yellow Pages Vietnam",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "VN"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 4,
+  "url": "https://yellowpages.vn",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "VCCI",
+  "category": "Awards / Lists / Associations",
+  "cost": "Paid",
+  "region": [
+   "VN"
+  ],
+  "niche": [
+   "b2b"
+  ],
+  "relevance": 5,
+  "url": "https://vcci.com.vn",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Yellow Pages Hong Kong",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "HK"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.yp.com.hk",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Hong Kong General Chamber of Commerce",
+  "category": "Awards / Lists / Associations",
+  "cost": "Paid",
+  "region": [
+   "HK"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.chamber.org.hk",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Dcard",
+  "category": "Forum / Community",
+  "cost": "Free",
+  "region": [
+   "TW"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.dcard.tw",
+  "link_type": "unknown",
+  "what_to_do": "Read the rules, contribute helpfully for a couple of weeks, then share links only where allowed.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "LINE Official Account",
+  "category": "Social / Bookmarking",
+  "cost": "Freemium",
+  "region": [
+   "TW",
+   "TH",
+   "JP"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 7,
+  "url": "https://tw.linebiz.com",
+  "link_type": "unknown",
+  "what_to_do": "Create a complete profile and post regularly with local and niche keywords.",
+  "notes": "LINE is the main messaging app in Taiwan, Thailand and Japan."
+ },
+ {
+  "name": "Japan Chamber of Commerce and Industry",
+  "category": "Awards / Lists / Associations",
+  "cost": "Paid",
+  "region": [
+   "JP"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 4,
+  "url": "https://www.jcci.or.jp",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Rakuten Ichiba",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "JP"
+  ],
+  "niche": [
+   "ecommerce"
+  ],
+  "relevance": 6,
+  "url": "https://www.rakuten.co.jp",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Naver Smart Place",
+  "category": "Local Directory / Citation",
+  "cost": "Free",
+  "region": [
+   "KR"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 8,
+  "url": "https://smartplace.naver.com",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Naver is the main local search engine in Korea."
+ },
+ {
+  "name": "Kakao Business",
+  "category": "Social / Bookmarking",
+  "cost": "Freemium",
+  "region": [
+   "KR"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 6,
+  "url": "https://business.kakao.com",
+  "link_type": "unknown",
+  "what_to_do": "Create a complete profile and post regularly with local and niche keywords.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Naver Cafe",
+  "category": "Forum / Community",
+  "cost": "Free",
+  "region": [
+   "KR"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 6,
+  "url": "https://section.cafe.naver.com",
+  "link_type": "unknown",
+  "what_to_do": "Read the rules, contribute helpfully for a couple of weeks, then share links only where allowed.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Gelbe Seiten",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "DE"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 7,
+  "url": "https://www.gelbeseiten.de",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Das Oertliche",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "DE"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 6,
+  "url": "https://www.dasoertliche.de",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "11880",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "DE"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.11880.com",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "XING",
+  "category": "Social / Bookmarking",
+  "cost": "Freemium",
+  "region": [
+   "DE",
+   "AT",
+   "CH"
+  ],
+  "niche": [
+   "b2b",
+   "software",
+   "education"
+  ],
+  "relevance": 6,
+  "url": "https://www.xing.com",
+  "link_type": "unknown",
+  "what_to_do": "Create a complete profile and post regularly with local and niche keywords.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "IHK (Chambers of Commerce)",
+  "category": "Awards / Lists / Associations",
+  "cost": "Paid",
+  "region": [
+   "DE"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 6,
+  "url": "https://www.ihk.de",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Membership is typically mandatory for businesses; use the local chamber's directory and events."
+ },
+ {
+  "name": "Kleinanzeigen",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "DE"
+  ],
+  "niche": [
+   "local_services",
+   "ecommerce",
+   "auto",
+   "real_estate"
+  ],
+  "relevance": 5,
+  "url": "https://www.kleinanzeigen.de",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Trusted Shops",
+  "category": "Review Platform",
+  "cost": "Paid",
+  "region": [
+   "DE",
+   "AT",
+   "CH",
+   "FR",
+   "ES",
+   "IT",
+   "NL",
+   "PL"
+  ],
+  "niche": [
+   "ecommerce"
+  ],
+  "relevance": 6,
+  "url": "https://www.trustedshops.de",
+  "link_type": "unknown",
+  "what_to_do": "Claim the profile and invite genuine customer reviews that follow platform policy.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "ProvenExpert",
+  "category": "Review Platform",
+  "cost": "Freemium",
+  "region": [
+   "DE",
+   "AT",
+   "CH"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.provenexpert.com",
+  "link_type": "unknown",
+  "what_to_do": "Claim the profile and invite genuine customer reviews that follow platform policy.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Herold",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "AT"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 6,
+  "url": "https://www.herold.at",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "WKO (Austrian Chamber)",
+  "category": "Awards / Lists / Associations",
+  "cost": "Paid",
+  "region": [
+   "AT"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.wko.at",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Willhaben",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "AT"
+  ],
+  "niche": [
+   "local_services",
+   "real_estate",
+   "auto",
+   "ecommerce"
+  ],
+  "relevance": 5,
+  "url": "https://www.willhaben.at",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "local.ch",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "CH"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 7,
+  "url": "https://www.local.ch",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "search.ch",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "CH"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.search.ch",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "PagesJaunes",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "FR"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 8,
+  "url": "https://www.pagesjaunes.fr",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Leboncoin",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "FR"
+  ],
+  "niche": [
+   "local_services",
+   "real_estate",
+   "auto",
+   "ecommerce"
+  ],
+  "relevance": 6,
+  "url": "https://www.leboncoin.fr",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "CCI France",
+  "category": "Awards / Lists / Associations",
+  "cost": "Paid",
+  "region": [
+   "FR"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.cci.fr",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Paginas Amarillas Espana",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "ES"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 7,
+  "url": "https://www.paginasamarillas.es",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Milanuncios",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "ES"
+  ],
+  "niche": [
+   "local_services",
+   "real_estate",
+   "auto",
+   "ecommerce"
+  ],
+  "relevance": 5,
+  "url": "https://www.milanuncios.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Camaras de Comercio (Espana)",
+  "category": "Awards / Lists / Associations",
+  "cost": "Paid",
+  "region": [
+   "ES"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.camara.es",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Paginas Amarelas (PT)",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "PT"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 6,
+  "url": "https://www.pai.pt",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "OLX Portugal",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "PT"
+  ],
+  "niche": [
+   "local_services",
+   "real_estate",
+   "auto",
+   "ecommerce"
+  ],
+  "relevance": 5,
+  "url": "https://www.olx.pt",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "PagineGialle",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "IT"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 7,
+  "url": "https://www.paginegialle.it",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Subito",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "IT"
+  ],
+  "niche": [
+   "local_services",
+   "real_estate",
+   "auto",
+   "ecommerce"
+  ],
+  "relevance": 5,
+  "url": "https://www.subito.it",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Unioncamere (Italy)",
+  "category": "Awards / Lists / Associations",
+  "cost": "Paid",
+  "region": [
+   "IT"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 4,
+  "url": "https://www.unioncamere.gov.it",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Gouden Gids",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "NL"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 7,
+  "url": "https://www.goudengids.nl",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Marktplaats",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "NL"
+  ],
+  "niche": [
+   "local_services",
+   "real_estate",
+   "auto",
+   "ecommerce"
+  ],
+  "relevance": 6,
+  "url": "https://www.marktplaats.nl",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Pages d'Or / Gouden Gids (Belgium)",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "BE"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 6,
+  "url": "https://www.goldenpages.be",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "2dehands",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "BE"
+  ],
+  "niche": [
+   "local_services",
+   "real_estate",
+   "auto",
+   "ecommerce"
+  ],
+  "relevance": 5,
+  "url": "https://www.2dehands.be",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Eniro",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "SE"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 6,
+  "url": "https://www.eniro.se",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Hitta",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "SE"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 6,
+  "url": "https://www.hitta.se",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Blocket",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "SE"
+  ],
+  "niche": [
+   "local_services",
+   "real_estate",
+   "auto",
+   "ecommerce"
+  ],
+  "relevance": 6,
+  "url": "https://www.blocket.se",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "1881",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "NO"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 7,
+  "url": "https://www.1881.no",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Gule Sider",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "NO"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 6,
+  "url": "https://www.gulesider.no",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "FINN.no",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "NO"
+  ],
+  "niche": [
+   "local_services",
+   "real_estate",
+   "auto",
+   "ecommerce"
+  ],
+  "relevance": 7,
+  "url": "https://www.finn.no",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Krak",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "DK"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 6,
+  "url": "https://www.krak.dk",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "DBA",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "DK"
+  ],
+  "niche": [
+   "local_services",
+   "real_estate",
+   "auto",
+   "ecommerce"
+  ],
+  "relevance": 5,
+  "url": "https://www.dba.dk",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Fonecta",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "FI"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 6,
+  "url": "https://www.fonecta.fi",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Tori.fi",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "FI"
+  ],
+  "niche": [
+   "local_services",
+   "real_estate",
+   "auto",
+   "ecommerce"
+  ],
+  "relevance": 5,
+  "url": "https://www.tori.fi",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Yrittajat (Finnish Entrepreneurs)",
+  "category": "Awards / Lists / Associations",
+  "cost": "Paid",
+  "region": [
+   "FI"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.yrittajat.fi",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "PKT",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "PL"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 6,
+  "url": "https://www.pkt.pl",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Panorama Firm",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "PL"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 6,
+  "url": "https://panoramafirm.pl",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "OLX Polska",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "PL"
+  ],
+  "niche": [
+   "local_services",
+   "real_estate",
+   "auto",
+   "ecommerce"
+  ],
+  "relevance": 6,
+  "url": "https://www.olx.pl",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Allegro",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "PL"
+  ],
+  "niche": [
+   "ecommerce"
+  ],
+  "relevance": 7,
+  "url": "https://allegro.pl",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Firmy.cz",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "CZ"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 8,
+  "url": "https://www.firmy.cz",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Heureka",
+  "category": "Review Platform",
+  "cost": "Paid",
+  "region": [
+   "CZ"
+  ],
+  "niche": [
+   "ecommerce"
+  ],
+  "relevance": 6,
+  "url": "https://www.heureka.cz",
+  "link_type": "unknown",
+  "what_to_do": "Claim the profile and invite genuine customer reviews that follow platform policy.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Guia Mais",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "BR"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.guiamais.com.br",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Apontador",
+  "category": "Local Directory / Citation",
+  "cost": "Free",
+  "region": [
+   "BR"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.apontador.com.br",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Reclame Aqui",
+  "category": "Review Platform",
+  "cost": "Freemium",
+  "region": [
+   "BR"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 8,
+  "url": "https://www.reclameaqui.com.br",
+  "link_type": "unknown",
+  "what_to_do": "Claim the profile and invite genuine customer reviews that follow platform policy.",
+  "notes": "Brand profile lets you answer complaints publicly; a key trust signal in Brazil."
+ },
+ {
+  "name": "OLX Brasil",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "BR"
+  ],
+  "niche": [
+   "local_services",
+   "real_estate",
+   "auto",
+   "ecommerce"
+  ],
+  "relevance": 6,
+  "url": "https://www.olx.com.br",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Mercado Livre",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "BR"
+  ],
+  "niche": [
+   "ecommerce"
+  ],
+  "relevance": 7,
+  "url": "https://www.mercadolivre.com.br",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Sebrae",
+  "category": "Awards / Lists / Associations",
+  "cost": "Free",
+  "region": [
+   "BR"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 6,
+  "url": "https://www.sebrae.com.br",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Small-business support, courses and events."
+ },
+ {
+  "name": "Mercado Libre",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "AR",
+   "MX",
+   "CL",
+   "CO",
+   "PE",
+   "UY"
+  ],
+  "niche": [
+   "ecommerce"
+  ],
+  "relevance": 7,
+  "url": "https://www.mercadolibre.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Opens the local country site; fees are commission based."
+ },
+ {
+  "name": "Seccion Amarilla",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "MX"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 6,
+  "url": "https://www.seccionamarilla.com.mx",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Paginas Amarillas Argentina",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "AR"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 6,
+  "url": "https://www.paginasamarillas.com.ar",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Yapo",
+  "category": "Marketplace / Partner Network",
+  "cost": "Free",
+  "region": [
+   "CL"
+  ],
+  "niche": [
+   "local_services",
+   "real_estate",
+   "auto",
+   "ecommerce"
+  ],
+  "relevance": 5,
+  "url": "https://www.yapo.cl",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Camara de Comercio de Bogota",
+  "category": "Awards / Lists / Associations",
+  "cost": "Paid",
+  "region": [
+   "CO"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.ccb.org.co",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Yellow Pages South Africa",
+  "category": "Local Directory / Citation",
+  "cost": "Freemium",
+  "region": [
+   "ZA"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 6,
+  "url": "https://www.yellowpages.co.za",
+  "link_type": "unknown",
+  "what_to_do": "Claim or create the listing and keep name, address, phone and website identical everywhere.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "HelloPeter",
+  "category": "Review Platform",
+  "cost": "Freemium",
+  "region": [
+   "ZA"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 7,
+  "url": "https://www.hellopeter.com",
+  "link_type": "unknown",
+  "what_to_do": "Claim the profile and invite genuine customer reviews that follow platform policy.",
+  "notes": "Brand profile lets you answer complaints publicly."
+ },
+ {
+  "name": "Gumtree South Africa",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "ZA"
+  ],
+  "niche": [
+   "local_services",
+   "real_estate",
+   "auto",
+   "ecommerce"
+  ],
+  "relevance": 6,
+  "url": "https://www.gumtree.co.za",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Takealot Seller Portal",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "ZA"
+  ],
+  "niche": [
+   "ecommerce"
+  ],
+  "relevance": 6,
+  "url": "https://seller.takealot.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "SA Chamber of Commerce and Industry",
+  "category": "Awards / Lists / Associations",
+  "cost": "Paid",
+  "region": [
+   "ZA"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 5,
+  "url": "https://www.sacci.org.za",
+  "link_type": "unknown",
+  "what_to_do": "Check membership or entry requirements, fees and deadlines before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Jiji",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "NG"
+  ],
+  "niche": [
+   "local_services",
+   "real_estate",
+   "auto",
+   "ecommerce"
+  ],
+  "relevance": 6,
+  "url": "https://jiji.ng",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Nairaland",
+  "category": "Forum / Community",
+  "cost": "Free",
+  "region": [
+   "NG"
+  ],
+  "niche": [
+   "all"
+  ],
+  "relevance": 6,
+  "url": "https://www.nairaland.com",
+  "link_type": "unknown",
+  "what_to_do": "Read the rules, contribute helpfully for a couple of weeks, then share links only where allowed.",
+  "notes": "Very active Nigerian forum; promotion boards exist, read rules."
+ },
+ {
+  "name": "Jumia",
+  "category": "Marketplace / Partner Network",
+  "cost": "Paid",
+  "region": [
+   "NG",
+   "KE",
+   "EG",
+   "GH",
+   "MA"
+  ],
+  "niche": [
+   "ecommerce"
+  ],
+  "relevance": 6,
+  "url": "https://www.jumia.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "PigiaMe",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "KE"
+  ],
+  "niche": [
+   "local_services",
+   "real_estate",
+   "auto",
+   "ecommerce"
+  ],
+  "relevance": 5,
+  "url": "https://www.pigiame.co.ke",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Tonaton",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "GH"
+  ],
+  "niche": [
+   "local_services",
+   "real_estate",
+   "auto",
+   "ecommerce"
+  ],
+  "relevance": 5,
+  "url": "https://tonaton.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "OLX Pakistan",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "PK"
+  ],
+  "niche": [
+   "local_services",
+   "real_estate",
+   "auto",
+   "ecommerce"
+  ],
+  "relevance": 5,
+  "url": "https://www.olx.com.pk",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Daraz Pakistan",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "PK"
+  ],
+  "niche": [
+   "ecommerce"
+  ],
+  "relevance": 6,
+  "url": "https://www.daraz.pk",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Daraz Bangladesh",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "BD"
+  ],
+  "niche": [
+   "ecommerce"
+  ],
+  "relevance": 6,
+  "url": "https://www.daraz.com.bd",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Daraz Sri Lanka",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "LK"
+  ],
+  "niche": [
+   "ecommerce"
+  ],
+  "relevance": 6,
+  "url": "https://www.daraz.lk",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Daraz Nepal",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "NP"
+  ],
+  "niche": [
+   "ecommerce"
+  ],
+  "relevance": 6,
+  "url": "https://www.daraz.com.np",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Bikroy",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "BD"
+  ],
+  "niche": [
+   "local_services",
+   "real_estate",
+   "auto",
+   "ecommerce"
+  ],
+  "relevance": 5,
+  "url": "https://bikroy.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "ikman.lk",
+  "category": "Marketplace / Partner Network",
+  "cost": "Freemium",
+  "region": [
+   "LK"
+  ],
+  "niche": [
+   "local_services",
+   "real_estate",
+   "auto",
+   "ecommerce"
+  ],
+  "relevance": 6,
+  "url": "https://ikman.lk",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ },
+ {
+  "name": "Hamro Bazar",
+  "category": "Marketplace / Partner Network",
+  "cost": "Free",
+  "region": [
+   "NP"
+  ],
+  "niche": [
+   "local_services",
+   "real_estate",
+   "auto",
+   "ecommerce"
+  ],
+  "relevance": 5,
+  "url": "https://hamrobazar.com",
+  "link_type": "unknown",
+  "what_to_do": "Check seller or partner eligibility, fees and lead quality before joining.",
+  "notes": "Confirm current pricing, eligibility and rules on the site before relying on it."
+ }
 ]
