@@ -25,7 +25,7 @@ except ImportError:  # AI is optional in free mode
 MODEL = os.getenv("CLAUDE_MODEL", "claude-3-7-sonnet-latest")
 UA = {"User-Agent": "Mozilla/5.0 (compatible; GrowthFinder/1.1)"}
 SEED_FILE = Path(__file__).parent / "seed_sources.json"
-BUILD = "2026-10-13-key-hint"
+BUILD = "2026-10-22-multi-country"
 
 
 def clean_key(value) -> str:
@@ -145,20 +145,186 @@ def web_search(query: str, n: int = 8) -> list[dict]:
         return [{"_search_error": f"{type(exc).__name__}: {safe_msg}"}]
 
 
+# name, then "|"-separated terms (country names, major cities, regions). Longest match wins.
+COUNTRIES = {
+    "US": ("United States", "usa|u.s.a|united states|america|new york|los angeles|chicago|houston|phoenix|philadelphia|san antonio|san diego|dallas|san jose|austin|san francisco|seattle|denver|boston|miami|atlanta|las vegas|california|texas|florida|new mexico|washington dc|illinois|ohio|michigan|pennsylvania|massachusetts|new jersey|north carolina|arizona|colorado|oregon|nevada|minnesota|tennessee"),
+    "GB": ("United Kingdom", "uk|u.k|united kingdom|great britain|britain|england|scotland|wales|northern ireland|london|manchester|leeds|glasgow|liverpool|edinburgh|bristol|sheffield|cardiff|belfast"),
+    "CA": ("Canada", "canada|toronto|vancouver|montreal|calgary|ottawa|edmonton|winnipeg|ontario|quebec|alberta|british columbia"),
+    "AU": ("Australia", "australia|sydney|melbourne|brisbane|perth|adelaide|canberra|gold coast|new south wales|queensland"),
+    "NZ": ("New Zealand", "new zealand|auckland|wellington|christchurch"),
+    "IE": ("Ireland", "ireland|dublin|cork|galway|limerick"),
+    "IN": ("India", "india|mumbai|delhi|new delhi|bangalore|bengaluru|hyderabad|chennai|kolkata|pune|ahmedabad|jaipur|surat|lucknow|kochi|cochin|coimbatore|madurai|trichy|tiruchirappalli|tamil nadu|kerala|karnataka|maharashtra|gujarat|telangana|andhra pradesh|noida|gurgaon|gurugram|chandigarh|indore|bhopal|nagpur|visakhapatnam|vijayawada|thiruvananthapuram|trivandrum|mysore|mysuru|mangalore|vellore|tirunelveli|erode|tiruppur|pondicherry|puducherry|thanjavur|nashik|rajkot|patna|ranchi|bhubaneswar|guwahati|dehradun|goa"),
+    "AE": ("United Arab Emirates", "uae|united arab emirates|dubai|abu dhabi|sharjah|ajman|ras al khaimah|fujairah|umm al quwain|al ain"),
+    "SA": ("Saudi Arabia", "saudi arabia|saudi|riyadh|jeddah|dammam|mecca|makkah|medina|khobar"),
+    "QA": ("Qatar", "qatar|doha"),
+    "KW": ("Kuwait", "kuwait"),
+    "BH": ("Bahrain", "bahrain|manama"),
+    "OM": ("Oman", "oman|muscat"),
+    "JO": ("Jordan", "jordan|amman"),
+    "EG": ("Egypt", "egypt|cairo|alexandria|giza"),
+    "IL": ("Israel", "israel|tel aviv|jerusalem|haifa"),
+    "TR": ("Turkey", "turkey|turkiye|türkiye|istanbul|ankara|izmir"),
+    "SG": ("Singapore", "singapore"),
+    "MY": ("Malaysia", "malaysia|kuala lumpur|penang|johor|selangor"),
+    "ID": ("Indonesia", "indonesia|jakarta|bali|surabaya|bandung"),
+    "PH": ("Philippines", "philippines|manila|cebu|davao|quezon"),
+    "TH": ("Thailand", "thailand|bangkok|phuket|chiang mai|pattaya"),
+    "VN": ("Vietnam", "vietnam|viet nam|hanoi|ho chi minh|saigon|da nang"),
+    "HK": ("Hong Kong", "hong kong"),
+    "TW": ("Taiwan", "taiwan|taipei|kaohsiung"),
+    "JP": ("Japan", "japan|tokyo|osaka|kyoto|yokohama|nagoya|fukuoka|sapporo"),
+    "KR": ("South Korea", "south korea|korea|seoul|busan|incheon"),
+    "CN": ("China", "china|beijing|shanghai|shenzhen|guangzhou"),
+    "DE": ("Germany", "germany|deutschland|berlin|munich|münchen|hamburg|frankfurt|cologne|köln|stuttgart|düsseldorf"),
+    "AT": ("Austria", "austria|österreich|vienna|wien|salzburg|graz"),
+    "CH": ("Switzerland", "switzerland|schweiz|suisse|zurich|zürich|geneva|basel|bern|lausanne"),
+    "FR": ("France", "france|paris|lyon|marseille|toulouse|bordeaux|lille"),
+    "ES": ("Spain", "spain|españa|madrid|barcelona|valencia|seville|sevilla|malaga|málaga|bilbao"),
+    "PT": ("Portugal", "portugal|lisbon|lisboa|porto|faro"),
+    "IT": ("Italy", "italy|italia|rome|roma|milan|milano|naples|napoli|turin|torino|florence|firenze"),
+    "NL": ("Netherlands", "netherlands|holland|amsterdam|rotterdam|the hague|utrecht|eindhoven"),
+    "BE": ("Belgium", "belgium|brussels|antwerp|ghent"),
+    "SE": ("Sweden", "sweden|stockholm|gothenburg|göteborg|malmö|malmo"),
+    "NO": ("Norway", "norway|oslo|bergen"),
+    "DK": ("Denmark", "denmark|copenhagen|aarhus"),
+    "FI": ("Finland", "finland|helsinki|espoo|tampere"),
+    "PL": ("Poland", "poland|warsaw|krakow|kraków|wroclaw|gdansk"),
+    "CZ": ("Czech Republic", "czech republic|czechia|prague|brno"),
+    "GR": ("Greece", "greece|athens|thessaloniki"),
+    "RO": ("Romania", "romania|bucharest"),
+    "HU": ("Hungary", "hungary|budapest"),
+    "BR": ("Brazil", "brazil|brasil|são paulo|sao paulo|rio de janeiro|brasília|brasilia|belo horizonte|curitiba"),
+    "MX": ("Mexico", "mexico|méxico|mexico city|guadalajara|monterrey|cancun|cancún"),
+    "AR": ("Argentina", "argentina|buenos aires|rosario"),
+    "CL": ("Chile", "chile|santiago"),
+    "CO": ("Colombia", "colombia|bogotá|bogota|medellín|medellin"),
+    "PE": ("Peru", "peru|perú|lima"),
+    "UY": ("Uruguay", "uruguay|montevideo"),
+    "ZA": ("South Africa", "south africa|johannesburg|cape town|durban|pretoria"),
+    "NG": ("Nigeria", "nigeria|lagos|abuja|port harcourt"),
+    "KE": ("Kenya", "kenya|nairobi|mombasa"),
+    "GH": ("Ghana", "ghana|accra|kumasi"),
+    "MA": ("Morocco", "morocco|casablanca|rabat|marrakech"),
+    "PK": ("Pakistan", "pakistan|karachi|lahore|islamabad"),
+    "BD": ("Bangladesh", "bangladesh|dhaka|chittagong"),
+    "LK": ("Sri Lanka", "sri lanka|colombo"),
+    "NP": ("Nepal", "nepal|kathmandu"),
+}
+
+_TERM_TO_CODE = sorted(
+    ((term.strip(), code) for code, (_, terms) in COUNTRIES.items() for term in terms.split("|") if term.strip()),
+    key=lambda pair: -len(pair[0]),
+)
+_TERM_REGEX = [(re.compile(r"(?<!\w)" + re.escape(term) + r"(?!\w)"), code) for term, code in _TERM_TO_CODE]
+CC_TLDS = {("uk" if code == "GB" else code.lower()) for code in COUNTRIES if code not in ("US", "CO")}
+
+
 def infer_country(location: str) -> str:
-    loc = location.lower()
-    mapping = {
-        "IN": ["india", "coimbatore", "chennai", "madurai", "tamil nadu", "bangalore", "bengaluru", "mumbai", "delhi", "hyderabad", "kerala"],
-        "US": ["usa", "united states", "new york", "california", "texas", "florida", "chicago"],
-        "GB": ["uk", "united kingdom", "england", "london", "manchester", "scotland"],
-        "CA": ["canada", "toronto", "vancouver", "montreal"],
-        "AU": ["australia", "sydney", "melbourne", "brisbane"],
-        "AE": ["uae", "dubai", "abu dhabi"],
-    }
-    for code, terms in mapping.items():
-        if any(term in loc for term in terms):
+    """Country code from free text like 'Dubai', 'Madurai, India' or 'Leeds UK'. '' if unknown."""
+    loc = (location or "").lower().strip()
+    if not loc:
+        return ""
+    last = loc.split(",")[-1].strip()
+    for term, code in _TERM_TO_CODE:
+        if term == last:
+            return code
+    for pattern, code in _TERM_REGEX:
+        if pattern.search(loc):
             return code
     return ""
+
+
+def country_tld(code: str) -> str:
+    if not code or code == "US":
+        return ""
+    return "." + ("uk" if code == "GB" else code.lower())
+
+
+NICHE_KEYWORDS = {
+    "healthcare": "clinic|hospital|doctor|dental|dentist|physio*|health*|medical|medicine|ivf|fertility|surgery|surgeon|skin|dermat*|ortho*|pediatric*|paediatric*|therapy|therapist|wellness|diagnostic*|pharmacy|ophthalm*|cardio*|gynae*|gyne*|oncolog*|cosmetic surgery|hair transplant|eye care|nursing|ayurved*|homeopath*",
+    "safety": "hse|safety|nebosh|iosh|osha|first aid|occupational|fire safety|ehs",
+    "education": "training|course|academy|school|college|institute|tuition|coaching|learning|certification|education|university|tutor*|workshop",
+    "software": "software|saas|app development|mobile app|web development|website development|startup|api|developer|it services|artificial intelligence|chatbot|cloud|cybersecurity|erp|crm",
+    "b2b": "b2b|wholesale|manufactur*|supplier|export*|import*|industrial|logistics|consulting|consultancy|enterprise|distributor|trading company|freight",
+    "local_services": "plumb*|electrician|electrical|cleaning|repair|pest control|painting|movers|moving company|home service*|contractor|handyman|ac service|ac repair|maintenance|carpent*|landscap*|interior design*|renovation|laundry|security services",
+    "food": "restaurant|cafe|catering|bakery|food|bar|kitchen|coffee|biryani|pizza|bistro|dessert",
+    "beauty": "salon|spa|beauty|makeup|barber|hair|nail*|skincare|cosmetic*|tattoo|lash*",
+    "real_estate": "real estate|property|properties|realtor|broker|apartment|villa|rental|builder|construction",
+    "legal": "lawyer|law firm|attorney|legal|advocate|notary|solicitor",
+    "ecommerce": "online store|ecommerce|e-commerce|retail|fashion|jewel*|furniture|electronics|boutique|shopify",
+    "auto": "car|auto|vehicle|garage|dealership|tyre|tire|motorcycle|car rental|detailing",
+    "travel": "travel|tour|tourism|hotel|resort|holiday|visa|airline|hostel|trip",
+}
+
+
+def _kw_regex(tokens: str):
+    parts = []
+    for tok in tokens.split("|"):
+        tok = tok.strip()
+        if not tok:
+            continue
+        if tok.endswith("*"):
+            parts.append(r"\b" + re.escape(tok[:-1]) + r"\w*")
+        else:
+            parts.append(r"\b" + re.escape(tok) + r"(?:s|es)?\b")
+    return re.compile("|".join(parts), re.I)
+
+
+NICHE_PATTERNS = {tag: _kw_regex(words) for tag, words in NICHE_KEYWORDS.items()}
+
+
+def detect_niches(strong_text: str, weak_text: str = "") -> list:
+    """Tags from what the user typed (any hit) plus website text (needs 3 different hits)."""
+    tags = []
+    for tag, pattern in NICHE_PATTERNS.items():
+        if pattern.search(strong_text or ""):
+            tags.append(tag)
+            continue
+        hits = {m.group(0).lower() for m in pattern.finditer((weak_text or "")[:2000])}
+        if len(hits) >= 3:
+            tags.append(tag)
+    return tags
+
+
+def local_queries(base: str, location: str, country_name: str) -> list:
+    city = (location or "").split(",")[0].strip()
+    place = country_name or location
+    qs = [
+        f"{base} {city} Facebook group community",
+        f"{base} {city} forum discussion",
+        f"{base} directory {place} submit listing",
+        f"{base} chamber of commerce association {place}",
+    ]
+    return [" ".join(q.split()) for q in qs]
+
+
+def enrich_profile(profile: dict, business: str, location: str, keyword: str, site_text: str) -> dict:
+    """Adds country, niche tags and local search terms, whether the profile came from AI or free mode."""
+    detected = infer_country(location)
+    code = detected or str(profile.get("country_code") or "").upper()
+    if code not in COUNTRIES:
+        code = ""
+    profile["country_code"] = code
+    profile["country_name"] = COUNTRIES[code][0] if code else ""
+    city = (location or "").split(",")[0].strip()
+    profile["city"] = profile.get("city") or city
+    profile["local_terms"] = sorted({t.lower() for t in (city, profile["country_name"]) if t})
+    profile["country_tld"] = country_tld(code)
+    strong = " ".join([
+        business or "", keyword or "", str(profile.get("niche", "")),
+        " ".join(str(x) for x in profile.get("services", []) or []),
+        " ".join(str(x) for x in profile.get("core_keywords", []) or []),
+    ])
+    profile["niche_tags"] = detect_niches(strong, site_text)
+    base = (keyword or "").strip() or (business or "").strip()
+    queries = list(profile.get("search_queries") or [])
+    known = {q.lower() for q in queries}
+    for q in local_queries(base, location, profile["country_name"]):
+        if q.lower() not in known:
+            queries.append(q)
+            known.add(q.lower())
+    profile["search_queries"] = queries[:18]
+    return profile
 
 
 def fallback_profile(business, location, keyword, site_text) -> dict:
@@ -170,31 +336,37 @@ def fallback_profile(business, location, keyword, site_text) -> dict:
         niche = "Physiotherapy / rehabilitation"
     elif any(x in combined for x in ["restaurant", "catering", "food", "cafe"]):
         niche = "Food / catering"
-    elif any(x in combined for x in ["software", "saas", "app", "plugin", "tool"]):
+    elif any(x in combined for x in ["software", "saas", "plugin"]):
         niche = "Software / digital product"
     country = infer_country(location)
+    country_name = COUNTRIES[country][0] if country else ""
     base = keyword.strip() if keyword else business.strip()
+    city = (location or "").split(",")[0].strip()
+    place = country_name or location
     queries = [
-        f'"{base}" {location} business directory',
-        f"free business listings {location} {base}",
-        f"{base} niche directory submit listing",
-        f"{base} industry association membership {location}",
-        f"{base} professional forum community discussion",
-        f"{base} subreddit community rules",
-        f"{base} questions answers forum",
-        f"{base} guest post contribute write for us",
-        f"{base} submit article industry blog",
+        f'"{base}" {city} business directory',
+        f"free business listings {city} {place}",
+        f"{base} directory {place} submit listing",
+        f"{base} {city} local directory listing",
+        f"{base} {place} industry association membership",
+        f"{base} {city} chamber of commerce business networking",
+        f"{base} {city} Facebook group community",
+        f"{base} professional forum community discussion {place}",
+        f"{base} subreddit community rules {city}",
+        f"{base} questions answers forum {place}",
+        f"{base} guest post contribute write for us {place}",
         f"{base} podcast guest opportunities",
-        f"{base} awards industry directory",
-        f"{base} sponsorship advertising rates directory",
-        f"{base} review sites {location}",
-        f"{base} local events networking {location}",
+        f"{base} awards industry directory {place}",
+        f"{base} sponsorship advertising rates {city}",
+        f"{base} review sites {city} {place}",
+        f"{base} local events networking {city}",
     ]
+    queries = [" ".join(q.split()) for q in queries]
     return {
         "niche": niche, "services": [keyword] if keyword else [],
         "audience": "Needs confirmation from the business profile",
         "scope": "local" if location else "national", "country_code": country,
-        "city": location, "core_keywords": [keyword] if keyword else [business],
+        "city": city or location, "core_keywords": [keyword] if keyword else [business],
         "search_queries": queries,
     }
 
@@ -280,6 +452,18 @@ def heuristic_classify(candidate: dict, profile: dict) -> dict:
         relevance = min(9, 5 + matches)
     if any(x in text for x in ["submit", "add listing", "write for us", "advertise", "join"]):
         relevance = min(10, relevance + 1)
+    # Prefer sources that clearly belong to the target place; demote other countries' sites.
+    local_terms = [t for t in profile.get("local_terms", []) if len(t) > 2]
+    if any(t in text for t in local_terms):
+        relevance = min(10, relevance + 1)
+    tld = profile.get("country_tld", "")
+    if tld:
+        dom = domain_of(candidate.get("url", ""))
+        last_label = dom.rsplit(".", 1)[-1]
+        if dom.endswith(tld):
+            relevance = min(10, relevance + 1)
+        elif last_label in CC_TLDS and last_label != tld[1:]:
+            relevance = max(1, relevance - 2)
     return {
         "Name": candidate.get("title") or domain_of(candidate.get("url", "")),
         "Category": category, "Cost": cost, "Est. cost": "",
@@ -333,7 +517,8 @@ what_to_do (concrete action), rules_notes. Do not infer a price or link attribut
     return rows
 
 
-def load_seed(country_code: str, scope: str) -> list[dict]:
+def load_seed(country_code: str, scope: str, niche_tags=None) -> list[dict]:
+    """Curated sources for this country (plus global ones), filtered to the business niche."""
     if not SEED_FILE.exists():
         return []
     try:
@@ -341,18 +526,30 @@ def load_seed(country_code: str, scope: str) -> list[dict]:
     except (OSError, json.JSONDecodeError):
         return []
     code = (country_code or "").upper()
+    tags = set(niche_tags or [])
     rows = []
     for source in seed_data:
-        region = source.get("region", "global").upper()
-        if region in ("GLOBAL", code):
-            if source.get("local_only") and scope == "global":
-                continue
-            rows.append({
-                "Name": source["name"], "Category": source["category"], "Cost": source["cost"],
-                "Est. cost": source.get("est_cost", ""), "Relevance": source.get("relevance", 6),
-                "Link type": source.get("link_type", "unknown"), "What to do": source.get("what_to_do", ""),
-                "Rules / notes": source.get("notes", ""), "URL": source["url"], "Source": "Curated starter list",
-            })
+        regions = source.get("region", "global")
+        regions = {str(r).upper() for r in (regions if isinstance(regions, list) else [regions])}
+        niches = set(source.get("niche") or ["all"])
+        if "GLOBAL" not in regions and code not in regions:
+            continue
+        if "all" not in niches and not (niches & tags):
+            continue
+        if source.get("local_only") and scope == "global":
+            continue
+        relevance = source.get("relevance", 6)
+        if code and code in regions:
+            relevance += 1  # local sources matter more than global ones
+        if "all" not in niches:
+            relevance += 1  # matches the business niche specifically
+        rows.append({
+            "Name": source["name"], "Category": source["category"], "Cost": source["cost"],
+            "Est. cost": source.get("est_cost", ""), "Relevance": min(10, relevance),
+            "Link type": source.get("link_type", "unknown"), "What to do": source.get("what_to_do", ""),
+            "Rules / notes": source.get("notes", ""), "URL": source["url"], "Source": "Curated starter list",
+            "Region": "Global" if "GLOBAL" in regions else ", ".join(sorted(regions)),
+        })
     return rows
 
 
@@ -477,6 +674,9 @@ if go:
         st.write("Reading the website and identifying the business niche")
         site_text = fetch_site(business.strip()) if "." in business and " " not in business else ""
         profile = profile_business(client, business.strip(), location.strip(), keyword.strip(), site_text)
+        profile = enrich_profile(profile, business.strip(), location.strip(), keyword.strip(), site_text)
+        if not profile.get("country_code"):
+            st.warning("Could not recognise the country from the location, so only global sources are added. Type it as 'City, Country'.")
         st.write(f"Searching the web with {len(profile['search_queries'])} queries")
         candidates = collect_candidates(profile["search_queries"])
         diag = st.session_state.get("search_diagnostics", {})
@@ -485,17 +685,26 @@ if go:
             st.warning("Search errors occurred. Expand diagnostics below for details.")
         st.write(f"Classifying {len(candidates)} live-search results")
         rows = classify(client, profile, candidates)
-        rows += load_seed(profile.get("country_code") or infer_country(location), profile.get("scope", "local"))
+        rows += load_seed(profile.get("country_code", ""), profile.get("scope", "local"), profile.get("niche_tags", []))
         unique, seen = [], set()
         for row in rows:
-            domain = domain_of(row.get("URL", ""))
-            if domain and domain not in seen:
-                seen.add(domain)
-                unique.append(row)
+            url = row.get("URL", "")
+            domain = domain_of(url)
+            if not domain:
+                continue
+            is_seed = str(row.get("Source", "")).startswith("Curated")
+            # Live results: one row per site. Curated rows: one per page, unless live search already found the site.
+            key = (domain, urlparse(url).path.rstrip("/")) if is_seed else (domain, "")
+            if key in seen or (is_seed and (domain, "") in seen):
+                continue
+            seen.add(key)
+            unique.append(row)
         if verify_links and unique:
             st.write(f"Checking {len(unique)} destination links")
             unique = verify(unique)
         df = pd.DataFrame(unique)
+        if "Region" in df.columns:
+            df["Region"] = df["Region"].fillna("")
         plan = build_plan(client, profile, df) if not df.empty else fallback_plan(profile, df)
         status.update(label="Research complete", state="complete")
     st.session_state["result"] = {"profile": profile, "df": df, "plan": plan}
@@ -512,6 +721,7 @@ if result:
         with st.expander("Search diagnostics"):
             for err in list(dict.fromkeys(diag["errors"]))[:5]:
                 st.error(err)
+    st.caption(f"Detected country: {profile.get('country_name') or 'not recognised'} · Business type tags: {', '.join(profile.get('niche_tags', [])) or 'none detected'}")
     with st.expander("Business profile", expanded=False):
         st.json(profile)
     st.info("Cost, rules, and relevance are research indicators, not guarantees. Confirm details on each destination before publishing or paying.")
